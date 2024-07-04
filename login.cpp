@@ -3,6 +3,7 @@
 #include "QString"
 #include "QMessageBox"
 #include "welcome.h"
+#include "home.h"
 QString c;
 LogIn::LogIn(QWidget *parent) :
     QMainWindow(parent),
@@ -64,7 +65,12 @@ void LogIn::on_pushButton_clicked()
             break;
         }
     }
+//Inja bayad username password check beshe baad vared beshe:
+    Home *ww = new Home;
+    ww->show();
+    this->close();
 }
+
 
 
 void LogIn::on_pushButton_3_clicked()

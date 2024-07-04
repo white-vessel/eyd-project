@@ -56,33 +56,36 @@ void confirmprofile::on_pushButton_clicked()
         }
     }
 
-
+    bool aba = false;
     if(ui->lineEdit_10->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+        aba = true;
     }
     else if(ui->lineEdit_11->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+        aba = true;
     }
     else if(ui->lineEdit_13->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+       aba = true;
     }
     else if(ui->lineEdit_14->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+        aba = true;
     }
     else if(ui->lineEdit_15->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+        aba = true;
     }
     else if(ui->lineEdit_16->text() =="")
     {
-        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+        aba = true;
     }
 
-
+    if(aba == true)
+    {
+        QMessageBox::warning(this,"Attention!","you did not fill every parameters!","OK");
+    }
     else
     {
         LogIn *ww=new LogIn;
