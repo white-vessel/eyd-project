@@ -13,6 +13,7 @@ SOURCES += \
     addpost.cpp \
     code.cpp \
     comments.cpp \
+    companyconfirmprofile.cpp \
     companysignup.cpp \
     confirmprofile.cpp \
     home.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     addpost.h \
     code.h \
     comments.h \
+    companyconfirmprofile.h \
     companysignup.h \
     confirmprofile.h \
     home.h \
@@ -52,6 +54,7 @@ FORMS += \
     addpost.ui \
     code.ui \
     comments.ui \
+    companyconfirmprofile.ui \
     companysignup.ui \
     confirmprofile.ui \
     home.ui \
