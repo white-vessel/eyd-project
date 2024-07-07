@@ -36,3 +36,9 @@ void welcome::on_pushButton2_clicked()
 }
 
 
+
+void welcome::on_comboBox_activated(int index)
+{
+
+}
+

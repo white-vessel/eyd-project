@@ -14,7 +14,11 @@ SOURCES += \
     addpost.cpp \
     code.cpp \
     comments.cpp \
+<<<<<<< HEAD
     company.cpp \
+=======
+    companyconfirmprofile.cpp \
+>>>>>>> 380a213258096373d819a81fae208fce9cf4f41e
     companysignup.cpp \
     confirmprofile.cpp \
     home.cpp \
@@ -38,7 +42,11 @@ HEADERS += \
     addpost.h \
     code.h \
     comments.h \
+<<<<<<< HEAD
     company.h \
+=======
+    companyconfirmprofile.h \
+>>>>>>> 380a213258096373d819a81fae208fce9cf4f41e
     companysignup.h \
     confirmprofile.h \
     home.h \
@@ -60,6 +68,7 @@ FORMS += \
     addpost.ui \
     code.ui \
     comments.ui \
+    companyconfirmprofile.ui \
     companysignup.ui \
     confirmprofile.ui \
     home.ui \

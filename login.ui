@@ -20,7 +20,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/new/prefix1/log in 1.jpg);</string>
+   <string notr="true">background-image: url(:/new/prefix1/log in 1.jpg);
+color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="lineEdit">
@@ -37,6 +38,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -76,6 +80,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -99,6 +106,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_7">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -113,6 +123,9 @@
       <pointsize>10</pointsize>
       <italic>false</italic>
      </font>
+    </property>
+    <property name="text">
+     <string/>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -168,6 +181,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_5">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>240</x>
@@ -193,6 +209,9 @@
     </property>
     <property name="text">
      <string>          good to see you again!</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
