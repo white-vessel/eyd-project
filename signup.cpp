@@ -75,7 +75,7 @@ void signup::on_pushButton_clicked()
     Uname=ui->lineEdit->text();
     QSqlQuery q;
     QSqlQuery s;
-    q.exec("SELECT username FROM user WHERE username='"+Uname+"'");
+
 
     QString a;
     a = ui->lineEdit_8->text();
@@ -88,13 +88,13 @@ void signup::on_pushButton_clicked()
         }
         else
         {
-            q.exec("INSERT INTO user(username)VALUES('"+Uname+"')");
+             q.exec("SELECT username FROM user WHERE username='"+Uname+"'");
 
             if(q.first()){
                 QMessageBox::warning(this,"erorr","this username already exist.");
             }
             else {
-
+                q.exec("INSERT INTO user(username)VALUES('"+Uname+"')");//same user fix
                 //تابع واسه ساخت ایدی
                 while (true) {
                     QString qstring_id = QString::number(id_count);
@@ -126,6 +126,11 @@ void signup::on_pushButton_clicked()
                     QMessageBox::warning(this,"Attention!","confirm your password correctly!","OK");
                 }
                 else{
+
+                QString pass;
+                pass=ui->lineEdit_6->text();
+                q.exec("UPDATE  user SET password = '"+pass+"' WHERE username='"+Uname+"'");//password not going to db fix
+
                 code *w2=new code;
                 w2->show();
                 this->close();
