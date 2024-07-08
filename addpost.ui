@@ -94,6 +94,19 @@ background-color: rgb(89, 255, 200);</string>
       </property>
      </widget>
     </widget>
+    <widget class="QLineEdit" name="filepth">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>290</y>
+       <width>271</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

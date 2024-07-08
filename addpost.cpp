@@ -8,6 +8,7 @@
 #include "jobs_karbar.h"
 #include "home.h"
 #include "QString"
+#include "QFileDialog"
 QString txt;
 addPost::addPost(QWidget *parent) :
     QMainWindow(parent),
@@ -23,7 +24,8 @@ addPost::~addPost()
 
 void addPost::SetTexts()
 {
-
+    auto filePath  = QFileDialog::getOpenFileName(this,"select a text file","home","Text file(*.txt");
+    ui->filepth->setText(filePath);
 }
 
 
@@ -31,4 +33,10 @@ void addPost::SetTexts()
 ui->textEdit->setText("txt");*/
 
 
+
+
+void addPost::on_addImagePsh_clicked()
+{
+
+}
 
