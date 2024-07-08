@@ -10,6 +10,11 @@
 #include "QString"
 #include "QFileDialog"
 #include "QLabel"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "foruser.h"//
 QString txt;
 addPost::addPost(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +23,10 @@ addPost::addPost(QWidget *parent) :
     ui->setupUi(this);
     this->centralWidget()->setStyleSheet(
              "background-image:url(\"bkg.jpg\"); background-position: center;" );
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 }
 
 addPost::~addPost()
