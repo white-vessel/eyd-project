@@ -17,6 +17,10 @@ public:
     QString GETfirst_name();
     QString GETlast_name();
     QString GETskills();
+
+    void SETfirst_name(QString);
+    void SETlast_name(QString);
+    void SETskills(QString);
 };
 
 #endif // PERSON_H

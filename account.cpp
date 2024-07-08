@@ -13,3 +13,16 @@ int Account::GETphone_number(){
 QString Account::GETemail(){
     return email;
 }
+
+void Account::SETaccount_id(QString id){
+    account_id=id;
+}
+void Account::SETphone_number(int num){
+    phone_number=num;
+}
+void Account::SETemail(QString mail){
+    email=mail;
+}
+void Account::SETpassword(QString pass){
+    password=pass;
+}
