@@ -12,8 +12,8 @@ welcome::welcome(QWidget *parent)
     , ui(new Ui::welcome)
 {
     ui->setupUi(this);
-}
 
+}
 welcome::~welcome()
 {
     delete ui;

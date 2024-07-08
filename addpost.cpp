@@ -9,12 +9,15 @@
 #include "home.h"
 #include "QString"
 #include "QFileDialog"
+#include "QLabel"
 QString txt;
 addPost::addPost(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::addPost)
 {
     ui->setupUi(this);
+    this->centralWidget()->setStyleSheet(
+             "background-image:url(\"bkg.jpg\"); background-position: center;" );
 }
 
 addPost::~addPost()
@@ -24,8 +27,7 @@ addPost::~addPost()
 
 void addPost::SetTexts()
 {
-    auto filePath  = QFileDialog::getOpenFileName(this,"select a text file","home","Text file(*.txt");
-    ui->filepth->setText(filePath);
+
 }
 
 
@@ -37,6 +39,9 @@ ui->textEdit->setText("txt");*/
 
 void addPost::on_addImagePsh_clicked()
 {
+    QString path = ui->filepth->text();
+    QPixmap image(path);
+    ui->label->setPixmap(image);
 
 }
 

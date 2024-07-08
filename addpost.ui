@@ -42,25 +42,6 @@ background-color: rgb(89, 255, 200);</string>
      <property name="title">
       <string/>
      </property>
-     <widget class="QPushButton" name="addImagePsh">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>150</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>add image</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
@@ -97,14 +78,49 @@ background-color: rgb(89, 255, 200);</string>
     <widget class="QLineEdit" name="filepth">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>160</x>
        <y>290</y>
        <width>271</width>
-       <height>24</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="frame">
-      <bool>false</bool>
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>eneter your file location path...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addImagePsh">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>290</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>add image</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>301</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
