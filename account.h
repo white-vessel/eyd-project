@@ -4,16 +4,22 @@
 #include <QMainWindow>
 #include "QString"
 #include <vector>
+#include <iostream>
 
 class Account
 {
     QString account_id;
-    int ehone_number;
+    int phone_number;
     QString email;
-    //connection-following-posts-dm VECTOR
+    //QVector <post> posts
+    QVector <QString> following;
+    QVector <QString> connection;
+
 
 public:
-
+    QString GETaccount_id();
+    int GETphone_number();
+    QString GETemail();
     Account();
 };
 

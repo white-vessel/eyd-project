@@ -16,6 +16,13 @@ class Job
     QString type;
 public:
     Job();
+    int GETsalary();
+    QString GETjob_name();
+    QString GETcompany_name();
+    QString GETskill_required();
+    QString GETworkPlace_type();
+    QString GETlocation();
+    QString GETtype();
 };
 
 #endif // JOB_H

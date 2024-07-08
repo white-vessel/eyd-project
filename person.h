@@ -14,6 +14,9 @@ class person : public Account
 public:
     person();
     void take_job(QString job);
+    QString GETfirst_name();
+    QString GETlast_name();
+    QString GETskills();
 };
 
 #endif // PERSON_H
