@@ -6,10 +6,12 @@
 #include <vector>
 #include <iostream>
 
+
 class Account
 {
     QString account_id;
     int phone_number;
+    QString password;
     QString email;
     //QVector <post> posts
     QVector <QString> following;
@@ -20,6 +22,14 @@ public:
     QString GETaccount_id();
     int GETphone_number();
     QString GETemail();
+
+    void SETCURRENTaccount_id(QString);
+    void GETCURRENTaccount_id(QString);//waiting for seyed
+    void SETaccount_id(QString);
+    void SETphone_number(int);
+    void SETemail(QString);
+    void SETpassword(QString);
+
     Account();
 };
 

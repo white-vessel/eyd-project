@@ -4,6 +4,17 @@
 #include "QMessageBox"
 #include "welcome.h"
 #include "home.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+
+#include "account.h"
+#include "person.h"
+
+using namespace std;
+
 QString c;
 LogIn::LogIn(QWidget *parent) :
     QMainWindow(parent),
@@ -26,6 +37,12 @@ LogIn::LogIn(QWidget *parent) :
         }
     }
     ui->lineEdit_7->setText(c);
+
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
+
 }
 
 LogIn::~LogIn()
@@ -66,9 +83,44 @@ void LogIn::on_pushButton_clicked()
         }
     }
 //Inja bayad username password check beshe baad vared beshe:
-    Home *ww = new Home;
-    ww->show();
-    this->close();
+
+
+    QString Uname;
+    QString Upass;
+
+    Uname=ui->lineEdit->text();
+    Upass=ui->lineEdit_4->text();
+    QSqlQuery q;
+    QSqlQuery s;
+
+    q.exec("SELECT username FROM user WHERE username='"+Uname+"'");
+
+   if(q.first()){
+       s.exec("SELECT password FROM user WHERE password='"+Upass+"'");
+       if(s.first()){
+
+           Home *ww = new Home;
+           ww->show();
+           this->close();
+
+           Account a;
+           a.SETCURRENTaccount_id(Uname);
+            //q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
+
+       }
+       else{
+           QMessageBox::warning(this,"erorr","password is incorrect!");
+
+       }
+   }
+   else {
+        QMessageBox::warning(this,"erorr","username not found!");
+   }
+
+
+
+
+
 }
 
 
