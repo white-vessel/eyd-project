@@ -7,11 +7,23 @@
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
 #include "addpost.h"
+#include "account.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "foruser.h"//
+
 Home::Home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Home)
 {
     ui->setupUi(this);
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 }
 
 Home::~Home()
@@ -71,5 +83,15 @@ void Home::on_pushButton_6_clicked()
 {
     addPost *ww = new addPost;
     ww->show();
+}
+
+
+void Home::on_pushButton_7_clicked()
+{
+    Account a;
+    QString cuser=a.GETCURRENTaccount_id();
+
+    QSqlQuery q;
+    q.exec();
 }
 

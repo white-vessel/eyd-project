@@ -6,6 +6,7 @@
 #include "confirmprofile.h"
 #include "code.h"
 #include "QMessageBox"
+#include "account.h"
 
 #include <QsqlDatabase>//دیتابیس
 #include "QsqlDriver"
@@ -144,6 +145,10 @@ void signup::on_pushButton_clicked()
 
         }
     }
+
+    Account acc;
+    acc.SETCURRENTaccount_id(Uname);
+
 }
 
 
