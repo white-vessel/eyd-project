@@ -85,3 +85,21 @@ void Me::on_pushButton_5_clicked()
     this->close();
 }
 
+
+void Me::on_pushButton_6_clicked()
+{
+    QString parametr;
+    parametr = ui->lineEdit_2->text();
+    asli.SETfirst_name(parametr);
+    parametr = ui->lineEdit_3->text();
+    asli.SETlast_name(parametr);
+    parametr = ui->lineEdit_5->text();
+    asli.SETskills(parametr);
+
+    QString Uname = naAsli.GETCURRENTaccount_id();
+    ui->lineEdit_2->setText(asli.GETfirst_name(Uname));
+    ui->lineEdit_3->setText(asli.GETlast_name(Uname));
+    ui->lineEdit_4->setText(asli.GETemployment_type(Uname));
+    ui->lineEdit_5->setText(asli.GETskills(Uname));
+}
+
