@@ -1,5 +1,5 @@
-#ifndef COMMENTS_H
-#define COMMENTS_H
+#ifndef COMMENTUI_H
+#define COMMENTUI_H
 
 #include <QMainWindow>
 
@@ -19,4 +19,4 @@ private:
     Ui::comments *ui;
 };
 
-#endif // COMMENTS_H
+#endif // COMMENTUI_H

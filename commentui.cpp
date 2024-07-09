@@ -1,4 +1,4 @@
-#include "comments.h"
+#include "commentui.h"
 #include "ui_comments.h"
 
 comments::comments(QWidget *parent) :

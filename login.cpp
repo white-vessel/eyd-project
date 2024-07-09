@@ -103,7 +103,9 @@ void LogIn::on_pushButton_clicked()
            ww->show();
            this->close();
 
-            q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
+           Account a;
+           a.SETCURRENTaccount_id(Uname);
+            //q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
 
        }
        else{

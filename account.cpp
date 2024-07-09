@@ -1,8 +1,18 @@
 #include "account.h"
 
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+
+
+
 Account::Account()
 {
-
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 }
 QString Account::GETaccount_id() {
     return account_id;
@@ -25,4 +35,8 @@ void Account::SETemail(QString mail){
 }
 void Account::SETpassword(QString pass){
     password=pass;
+}
+void Account::SETCURRENTaccount_id(QString Uname){
+    QSqlQuery q;
+    q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");
 }

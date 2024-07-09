@@ -6,6 +6,7 @@
 #include <vector>
 #include <iostream>
 
+
 class Account
 {
     QString account_id;
@@ -22,6 +23,7 @@ public:
     int GETphone_number();
     QString GETemail();
 
+    void SETCURRENTaccount_id(QString);
     void SETaccount_id(QString);
     void SETphone_number(int);
     void SETemail(QString);

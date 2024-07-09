@@ -13,14 +13,18 @@ SOURCES += \
     addjob.cpp \
     addpost.cpp \
     code.cpp \
-    comments.cpp \
+    comment.cpp \
+    commentui.cpp \
     company.cpp \
     companysignup.cpp \
     confirmprofile.cpp \
+    content.cpp \
+    direct_message.cpp \
     home.cpp \
     job.cpp \
     jobs_admin.cpp \
     jobs_karbar.cpp \
+    like.cpp \
     login.cpp \
     main.cpp \
     me.cpp \
@@ -28,7 +32,9 @@ SOURCES += \
     my_network_admin.cpp \
     my_networks_karbar.cpp \
     person.cpp \
+    post.cpp \
     signup.cpp \
+    time.cpp \
     viewprofile.cpp \
     welcome.cpp
 
@@ -37,21 +43,27 @@ HEADERS += \
     addjob.h \
     addpost.h \
     code.h \
-    comments.h \
+    comment.h \
+    commentui.h \
     company.h \
     companysignup.h \
     confirmprofile.h \
+    content.h \
+    direct_message.h \
     home.h \
     job.h \
     jobs_admin.h \
     jobs_karbar.h \
+    like.h \
     login.h \
     me.h \
     messeging.h \
     my_network_admin.h \
     my_networks_karbar.h \
     person.h \
+    post.h \
     signup.h \
+    time.h \
     viewprofile.h \
     welcome.h
 
@@ -59,7 +71,7 @@ FORMS += \
     addjob.ui \
     addpost.ui \
     code.ui \
-    comments.ui \
+    commentui.ui \
     companysignup.ui \
     confirmprofile.ui \
     home.ui \
