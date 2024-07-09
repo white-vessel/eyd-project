@@ -165,7 +165,7 @@ void signup::on_comboBox_activated(int index)
     case '1':
         break;
     case '2':
-       q.exec("UPDATE user SET is_company = '1' WHERE username='"+Uname+"'");
+       q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
         break;
     }
 }
