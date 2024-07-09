@@ -5,12 +5,12 @@
 #include "QString"
 #include <vector>
 #include <iostream>
-
+using namespace std;
 
 class Account
 {
     QString account_id;
-    int phone_number;
+    QString phone_number;
     QString password;
     QString email;
     //QVector <post> posts
@@ -20,13 +20,13 @@ class Account
 
 public:
     QString GETaccount_id();
-    int GETphone_number();
+    QString GETphone_number(QString);
     QString GETemail();
+    QString GETCURRENTaccount_id();//waiting for seyed
 
     void SETCURRENTaccount_id(QString);
-    void GETCURRENTaccount_id(QString);//waiting for seyed
     void SETaccount_id(QString);
-    void SETphone_number(int);
+    void SETphone_number(QString);
     void SETemail(QString);
     void SETpassword(QString);
 

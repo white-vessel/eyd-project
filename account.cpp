@@ -15,10 +15,19 @@ Account::Account()
     database.open();
 }
 QString Account::GETaccount_id() {
+
     return account_id;
 }
-int Account::GETphone_number(){
-    return phone_number;
+QString Account::GETphone_number(QString id){
+    QSqlQuery q;
+    q.exec("SELECT phone_number FROM user WHERE username='"+id+"'");
+    if(q.first()){
+        return phone_number=q.value("phone_number").toString();
+    }
+    else{
+        return "nophonenum";
+    }
+
 }
 QString Account::GETemail(){
     return email;
@@ -27,7 +36,7 @@ QString Account::GETemail(){
 void Account::SETaccount_id(QString id){
     account_id=id;
 }
-void Account::SETphone_number(int num){
+void Account::SETphone_number(QString num){
     phone_number=num;
 }
 void Account::SETemail(QString mail){
@@ -39,4 +48,16 @@ void Account::SETpassword(QString pass){
 void Account::SETCURRENTaccount_id(QString Uname){
     QSqlQuery q;
     q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//need check for delete everytime
+}
+
+QString Account::GETCURRENTaccount_id(){
+    QSqlQuery q;
+    q.exec("SELECT username FROM current_user");
+    if(q.first()){
+        QString current_user=q.value("username").toString();
+        return current_user;
+    }
+    else{
+        return "nocurrentuser";
+    }
 }
