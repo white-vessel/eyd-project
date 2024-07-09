@@ -1,12 +1,11 @@
-#include "home.h"
-#include "ui_home.h"
+#include "messeging.h"
+#include "ui_messeging.h"
 #include "my_network_admin.h"
 #include "my_networks_karbar.h"
-#include "messeging.h"
+#include "home.h"
 #include "me.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
-#include "addpost.h"
 #include "account.h"
 
 #include <QsqlDatabase>//دیتابیس
@@ -15,9 +14,10 @@
 #include "QsqlQueryModel"
 #include "foruser.h"//
 
-Home::Home(QWidget *parent) :
+
+Messeging::Messeging(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::Home)
+    ui(new Ui::Messeging)
 {
     ui->setupUi(this);
     QSqlDatabase database;//دیتابیس
@@ -26,12 +26,12 @@ Home::Home(QWidget *parent) :
     database.open();
 }
 
-Home::~Home()
+Messeging::~Messeging()
 {
     delete ui;
 }
 
-void Home::on_homePushButton_clicked()
+void Messeging::on_homePushButton_clicked()
 {
     Home *w = new Home;
     w->show();
@@ -39,7 +39,7 @@ void Home::on_homePushButton_clicked()
 }
 
 
-void Home::on_pushButton_2_clicked()
+void Messeging::on_pushButton_2_clicked()
 {
     My_Networks_karbar *w1 = new My_Networks_karbar;
     w1->show();
@@ -51,7 +51,7 @@ void Home::on_pushButton_2_clicked()
 }
 
 
-void Home::on_pushButton_3_clicked()
+void Messeging::on_pushButton_3_clicked()
 {
     Jobs_Admin *w2 = new Jobs_Admin;
     w2->show();
@@ -63,7 +63,7 @@ void Home::on_pushButton_3_clicked()
 }
 
 
-void Home::on_pushButton_4_clicked()
+void Messeging::on_pushButton_4_clicked()
 {
     Messeging *w3 = new Messeging;
     w3->show();
@@ -71,7 +71,7 @@ void Home::on_pushButton_4_clicked()
 }
 
 
-void Home::on_pushButton_5_clicked()
+void Messeging::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
@@ -79,22 +79,31 @@ void Home::on_pushButton_5_clicked()
 }
 
 
-void Home::on_pushButton_6_clicked()
+void Messeging::on_pushButton_8_clicked()
 {
-    addPost *ww = new addPost;
-    ww->show();
-}
-
-
-void Home::on_pushButton_7_clicked()
-{
-    Account a;
-    QString cuser=a.GETCURRENTaccount_id();
-
-    QSqlQuery q;
-    q.exec("SELECT time1,caption,username FROM post ORDER BY time1 DESC");
+     QSqlQuery q;
+     
+     
+    
+    Account acc;
+    QString fromuser=acc.GETCURRENTaccount_id();
+    QString touser =ui->lineEdit_2->text();
+    
+    q.exec("SELECT time2,from_user,to_user,chat FROM direct WHERE owner='"+fromuser+"' ORDER BY time2 DESC");
     QSqlQueryModel *qm = new QSqlQueryModel;
     qm->setQuery(q);
     ui->tableView->setModel(qm);
+    
+    
+}
+
+
+void Messeging::on_pushButton_6_clicked()
+{
+    Account acc;
+    QString fromuser=acc.GETCURRENTaccount_id();
+    QSqlQuery q;
+    QString txt=ui->lineEdit_3->text();
+    q.exec("INSERT INTO direct(chat)VALUES ('"+txt+"') WHERE" );
 }
 
