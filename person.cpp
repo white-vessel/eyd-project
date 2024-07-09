@@ -43,9 +43,13 @@ QString person::GETskills(QString Uname){
 
 void person::SETfirst_name(QString firstname ){
     first_name=firstname;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(skills)VALUES('"+firstname+"')");
 }
 void person::SETlast_name(QString lastname){
     last_name=lastname;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(skills)VALUES('"+lastname+"')");
 }
 void person::SETskills(QString skill){
     skills=skill;
