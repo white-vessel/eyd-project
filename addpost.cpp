@@ -72,3 +72,10 @@ void addPost::on_pushButton_2_clicked()
 
 }
 
+
+void addPost::on_pushButton_clicked()
+{
+    //QString cap=ui->capin->text();
+    //posts.SETcaption(capin);
+}
+
