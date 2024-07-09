@@ -16,6 +16,7 @@ public:
     void SETimage_path(QString);
     void SETcaption(QString);
     void SETcategory(QString);
+    void SETtime(QString);
 
     QString GETimage_path();
     QString GETcaption();

@@ -38,3 +38,7 @@ void post::SETcategory(QString ctg){
     q.exec("INSERT INTO post(category)VALUES('"+ctg+"')WHERE username='"+cuser+"'");
 
 }
+
+void post::SETtime(QString){
+
+}

@@ -54,11 +54,11 @@ ui->textEdit->setText("txt");*/
 
 void addPost::on_addImagePsh_clicked()
 {
-    QString path = ui->filepth->text();
+    /*QString path = ui->filepth->text();
     QPixmap image(path);
     ui->label->setPixmap(image);
 
-    posts.SETimage_path(path);
+    posts.SETimage_path(path);*/
     //QSqlQuery q;
     //QString cuser;
     //cuser=acc.GETCURRENTaccount_id();
@@ -69,14 +69,22 @@ void addPost::on_addImagePsh_clicked()
 
 void addPost::on_pushButton_2_clicked()
 {
+        QSqlQuery q;
+        QString cap = ui->lineEdit->text();
+        QString path = ui->filepth->text();
+        QString cuser=acc.GETCURRENTaccount_id();
+        //posts.SETimage_path(path);
+        //posts.SETcaption(cap);
+        //q.exec("INSERT INTO post(time1)VALUES(date('now'))WHERE file_path='"+path+"' AND caption='"+cap+"'"  );
 
+        q.exec("INSERT INTO post(time1,caption,file_path,username)VALUES (time('now'),'"+cap+"','"+path+"','"+cuser+"')");
 }
 
 
 void addPost::on_pushButton_clicked()
 {
-    QString cap;
+    /*QString cap;
     cap = ui->lineEdit->text();
-    posts.SETcaption(cap);
+    posts.SETcaption(cap);*/
 }
 
