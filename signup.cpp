@@ -155,3 +155,18 @@ void signup::on_pushButton_3_clicked()
 
 }
 
+
+void signup::on_comboBox_activated(int index)
+{
+    QString Uname;
+    Uname=ui->lineEdit->text();
+    QSqlQuery q;
+    switch (index) {
+    case '1':
+        break;
+    case '2':
+       q.exec("UPDATE user SET is_company = '1' WHERE username='"+Uname+"'");
+        break;
+    }
+}
+
