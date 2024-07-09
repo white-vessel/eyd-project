@@ -1,4 +1,4 @@
-#include "companysignup.h"
+#include "companyhome.h"
 #include "ui_companysignup.h"
 #include "my_network_admin.h"
 #include "my_networks_karbar.h"

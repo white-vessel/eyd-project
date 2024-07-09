@@ -1,5 +1,5 @@
-#ifndef COMPANYSIGNUP_H
-#define COMPANYSIGNUP_H
+#ifndef COMPANYHOME_H
+#define COMPANYHOME_H
 
 #include <QMainWindow>
 
@@ -30,4 +30,4 @@ private:
     Ui::companySignUp *ui;
 };
 
-#endif // COMPANYSIGNUP_H
+#endif // COMPANYHOME_H

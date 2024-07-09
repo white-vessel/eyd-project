@@ -49,4 +49,6 @@ void person::SETlast_name(QString lastname){
 }
 void person::SETskills(QString skill){
     skills=skill;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(skills)VALUES('"+skill+"')");
 }
