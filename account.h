@@ -19,9 +19,9 @@ class Account
 
 
 public:
-    QString GETaccount_id();
+    QString GETaccount_id(QString);
     QString GETphone_number(QString);
-    QString GETemail();
+    QString GETemail(QString);
     QString GETCURRENTaccount_id();//waiting for seyed
 
     void SETCURRENTaccount_id(QString);

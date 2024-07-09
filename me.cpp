@@ -6,11 +6,27 @@
 #include "home.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "account.h"
+#include "person.h"
+person asli;
 Me::Me(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Me)
 {
     ui->setupUi(this);
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
+    QSqlQuery q;
+    q.exec("SELECT name FROM current_user");
+    QString Uname = q.value("username").toString();
+    asli.SETCURRENTaccount_id(Uname);
+    ui->lineEdit_2->setText(asli.GETCURRENTaccount_id());
 }
 
 Me::~Me()
