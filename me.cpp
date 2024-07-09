@@ -26,7 +26,8 @@ Me::Me(QWidget *parent) :
     q.exec("SELECT name FROM current_user");
     QString Uname = q.value("username").toString();
     asli.SETCURRENTaccount_id(Uname);
-    ui->lineEdit_2->setText(asli.GETCURRENTaccount_id());
+    ui->lineEdit_2->setText(asli.GETfirst_name(Uname));
+    ui->lineEdit_3->setText(asli.GETlast_name(Uname));
 }
 
 Me::~Me()

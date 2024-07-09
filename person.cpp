@@ -44,12 +44,20 @@ QString person::GETskills(QString Uname){
 void person::SETfirst_name(QString firstname ){
     first_name=firstname;
     QSqlQuery q;
+<<<<<<< Updated upstream
     q.exec("INSERT INTO user(skills)VALUES('"+firstname+"')");
+=======
+    q.exec("INSERT INTO user(first_name)VALUES('"+firstname+"')");
+>>>>>>> Stashed changes
 }
 void person::SETlast_name(QString lastname){
     last_name=lastname;
     QSqlQuery q;
+<<<<<<< Updated upstream
     q.exec("INSERT INTO user(skills)VALUES('"+lastname+"')");
+=======
+    q.exec("INSERT INTO user(last_name)VALUES('"+lastname+"')");
+>>>>>>> Stashed changes
 }
 void person::SETskills(QString skill){
     skills=skill;
