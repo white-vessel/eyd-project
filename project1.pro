@@ -34,7 +34,7 @@ SOURCES += \
     person.cpp \
     post.cpp \
     signup.cpp \
-    time.cpp \
+    time1.cpp \
     viewprofile.cpp \
     welcome.cpp
 
@@ -63,7 +63,7 @@ HEADERS += \
     person.h \
     post.h \
     signup.h \
-    time.h \
+    time1.h \
     viewprofile.h \
     welcome.h
 
