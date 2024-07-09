@@ -64,8 +64,13 @@ void person::SETlast_name(QString lastname){
     q.exec("INSERT INTO user(skills)VALUES('"+lastname+"')");
     q.exec("INSERT INTO user(last_name)VALUES('"+lastname+"')");
 }
+<<<<<<< HEAD
 void person::SETskills(QString skill){
     //skills=skill;
+=======
+void person::SETskills(QString skills){
+    skill=skills;
+>>>>>>> 19c37be6b0c27e9d53d4fd51a1f4b361bbb71add
     QSqlQuery q;
     q.exec("INSERT INTO user(skills)VALUES('"+skill+"')");
 }
