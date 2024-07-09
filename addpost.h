@@ -21,6 +21,8 @@ private slots:
 
     void on_addImagePsh_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::addPost *ui;
 };

@@ -4,22 +4,37 @@
 #include "QsqlDriver"
 #include "QsqlQuery"
 #include "QsqlQueryModel"
+#include "account.h"
 
+Account accounts;
 /*QSqlQuery q;
 q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");*/
 post::post()
 {
 
 }
-void SETimage_path(QString img){
+void post::SETimage_path(QString img){
+
     QSqlQuery q;
-    q.exec("INSERT INTO post(file_path)VALUES('"+img+"')");
+    QString cuser;
+    cuser=accounts.GETCURRENTaccount_id();
+    q.exec("INSERT INTO post(username,file_path)VALUES('"+cuser+"','"+img+"')");
+    //q.exec("INSERT INTO post(file_path)VALUES('"+img+"')WHERE username='"+cuser+"'");
+
 }
-void SETcaption(QString cpt){
+void post::SETcaption(QString cpt){
+    QString cuser;
+    cuser=accounts.GETCURRENTaccount_id();
     QSqlQuery q;
-    q.exec("INSERT INTO post(caption)VALUES('"+cpt+"')");
+     q.exec("INSERT INTO post(username)VALUES('"+cuser+"')");
+    q.exec("INSERT INTO post(caption)VALUES('"+cpt+"')WHERE username='"+cuser+"'");
+
 }
-void SETcategory(QString ctg){
+void post::SETcategory(QString ctg){
+    QString cuser;
+    cuser=accounts.GETCURRENTaccount_id();
     QSqlQuery q;
-    q.exec("INSERT INTO post(category)VALUES('"+ctg+"')");
+    q.exec("INSERT INTO post(username)VALUES('"+cuser+"')");
+    q.exec("INSERT INTO post(category)VALUES('"+ctg+"')WHERE username='"+cuser+"'");
+
 }

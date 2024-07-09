@@ -15,6 +15,12 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "foruser.h"//
+
+#include "post.h"
+#include "content.h"
+Account acc;
+post posts;
+
 QString txt;
 addPost::addPost(QWidget *parent) :
     QMainWindow(parent),
@@ -51,6 +57,18 @@ void addPost::on_addImagePsh_clicked()
     QString path = ui->filepth->text();
     QPixmap image(path);
     ui->label->setPixmap(image);
+
+    posts.SETimage_path(path);
+    //QSqlQuery q;
+    //QString cuser;
+    //cuser=acc.GETCURRENTaccount_id();
+    //q.exec("INSERT INTO post(username,file_path)VALUES('"+cuser+"','"+path+"')");
+   // q.exec("INSERT INTO post(file_path)VALUES('"+path+"')WHERE post.username='"+cuser+"'");
+}
+
+
+void addPost::on_pushButton_2_clicked()
+{
 
 }
 

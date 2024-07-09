@@ -47,7 +47,15 @@ void Account::SETpassword(QString pass){
 }
 void Account::SETCURRENTaccount_id(QString Uname){
     QSqlQuery q;
-    q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//need check for delete everytime
+    q.exec("SELECT username FROM current_user");
+    if(q.first()){
+        q.exec("DELETE FROM current_user ");
+        q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");
+    }
+    else{
+        q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//need check for delete everytime
+    }
+
 }
 
 QString Account::GETCURRENTaccount_id(){
