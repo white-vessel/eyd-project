@@ -7,7 +7,7 @@
 #include "code.h"
 #include "QMessageBox"
 #include "account.h"
-
+#include "QComboBox"
 #include <QsqlDatabase>//دیتابیس
 #include "QsqlDriver"
 #include "QsqlQuery"
@@ -46,6 +46,7 @@ signup::signup(QWidget *parent) :
 signup::~signup()
 {
     delete ui;
+
 }
 
 void signup::on_pushButton_2_clicked()
@@ -167,9 +168,10 @@ void signup::on_comboBox_activated(int index)
     Uname=ui->lineEdit->text();
     QSqlQuery q;
     switch (index) {
-    case '1':
+    case 0:
+        q.exec("INSERT INTO user(is_company) VALUES '0' WHERE username='"+Uname+"'");
         break;
-    case '2':
+    case 1:
        q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
         break;
     }

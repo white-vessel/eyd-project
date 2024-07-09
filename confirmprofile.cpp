@@ -7,8 +7,7 @@
 #include "QsqlDriver"
 #include "QsqlQuery"
 #include "QsqlQueryModel"
-
-
+#include "person.h"
 confirmprofile::confirmprofile(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::confirmprofile)
@@ -28,7 +27,7 @@ void confirmprofile::on_pushButton_clicked()
     int id_count=1;
     QSqlQuery q;
     QSqlQuery s;
-
+    QString skl;
     QString Fname,Lname,birthday,most_recent_job_title,university,most_recent_company,employment_type;
     Fname=ui->lineEdit_10->text();
     Lname=ui->lineEdit_11->text();
@@ -37,7 +36,7 @@ void confirmprofile::on_pushButton_clicked()
     university=ui->lineEdit_14->text();
     most_recent_company=ui->lineEdit_15->text();
     employment_type=ui->lineEdit_16->text();
-
+    skl = ui->lineEdit_18->text();
 
 
     while (true) {
@@ -51,7 +50,7 @@ void confirmprofile::on_pushButton_clicked()
         else {
             id_count=id_count-1;
             QString qstring_id = QString::number(id_count);
-            q.exec("UPDATE user SET first_name='"+Fname+"',last_name='"+Lname+"',birthday='"+birthday+"',most_recent_jobtitle='"+most_recent_job_title+"',school_university='"+university+"',most_recent_company='"+most_recent_company+"',employment_type='"+employment_type+"' WHERE id='"+qstring_id+"'");
+            q.exec("UPDATE user SET first_name='"+Fname+"',last_name='"+Lname+"',birthday='"+birthday+"',most_recent_jobtitle='"+most_recent_job_title+"',school_university='"+university+"',most_recent_company='"+most_recent_company+"',employment_type='"+employment_type+"',skills='"+skl+"' WHERE id='"+qstring_id+"'");
             break;
         }
     }
