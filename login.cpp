@@ -73,12 +73,14 @@ void LogIn::on_pushButton_2_clicked()
 void LogIn::on_pushButton_clicked()
 {
     QString a;
+    bool capcha = false;
     a = ui->lineEdit_8->text();
     for (int i = 0; i<5 ;i++ )
     {
         if(c[i] != a[i])
         {
             QMessageBox::warning(this,"wrong captcha!","you entered a wrong captcha!","ok");
+            capcha = true;
             break;
         }
     }
@@ -98,11 +100,11 @@ void LogIn::on_pushButton_clicked()
    if(q.first()){
        s.exec("SELECT password FROM user WHERE password='"+Upass+"'");
        if(s.first()){
-
+           if(capcha == false){
            Home *ww = new Home;
            ww->show();
            this->close();
-
+           }
            Account a;
            a.SETCURRENTaccount_id(Uname);
             //q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
