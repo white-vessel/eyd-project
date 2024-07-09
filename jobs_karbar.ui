@@ -169,6 +169,19 @@ background-color: rgb(192, 255, 175);</string>
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>120</y>
+      <width>891</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

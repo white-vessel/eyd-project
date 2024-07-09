@@ -97,6 +97,7 @@ RESOURCES += \
     hime.qrc \
     homePage.qrc \
     homePage1.qrc \
+    karbar.qrc \
     login1.qrc \
     loginp.qrc \
     signup.qrc \
