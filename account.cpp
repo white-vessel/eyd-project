@@ -38,5 +38,5 @@ void Account::SETpassword(QString pass){
 }
 void Account::SETCURRENTaccount_id(QString Uname){
     QSqlQuery q;
-    q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");
+    q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//need check for delete everytime
 }

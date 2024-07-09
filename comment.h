@@ -1,8 +1,9 @@
 #ifndef COMMENT_H
 #define COMMENT_H
 
+#include "content.h"
 
-class comment
+class comment:public content
 {
 public:
     comment();

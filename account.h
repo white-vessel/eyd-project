@@ -24,6 +24,7 @@ public:
     QString GETemail();
 
     void SETCURRENTaccount_id(QString);
+    void GETCURRENTaccount_id(QString);//waiting for seyed
     void SETaccount_id(QString);
     void SETphone_number(int);
     void SETemail(QString);

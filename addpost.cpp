@@ -10,6 +10,10 @@
 #include "QString"
 #include "QFileDialog"
 #include "QLabel"
+
+#include "post.h"
+
+
 QString txt;
 addPost::addPost(QWidget *parent) :
     QMainWindow(parent),
