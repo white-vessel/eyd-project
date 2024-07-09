@@ -19,9 +19,6 @@ color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="lineEdit">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -38,9 +35,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -57,9 +51,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -76,9 +67,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_4">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -95,13 +83,10 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_5">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>210</y>
+      <x>500</x>
+      <y>200</y>
       <width>171</width>
       <height>24</height>
      </rect>
@@ -114,9 +99,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_6">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -133,9 +115,6 @@ color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_7">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -154,8 +133,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="lineEdit_8">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>450</y>
+      <x>300</x>
+      <y>410</y>
       <width>113</width>
       <height>41</height>
      </rect>
@@ -171,7 +150,7 @@ color: rgb(0, 0, 0);</string>
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>460</y>
+      <y>420</y>
       <width>51</width>
       <height>31</height>
      </rect>
@@ -203,9 +182,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="lineEdit_9">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>400</x>
       <y>20</y>
-      <width>341</width>
+      <width>331</width>
       <height>71</height>
      </rect>
     </property>
@@ -217,7 +196,7 @@ color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="text">
-     <string>confirm your profile!</string>
+     <string>confirm your prifile!</string>
     </property>
     <property name="frame">
      <bool>true</bool>
@@ -279,8 +258,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="lineEdit_15">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>210</y>
+      <x>670</x>
+      <y>200</y>
       <width>113</width>
       <height>24</height>
      </rect>
@@ -292,32 +271,6 @@ color: rgb(0, 0, 0);</string>
       <x>660</x>
       <y>300</y>
       <width>113</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_17">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>360</y>
-      <width>113</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>skill:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_18">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>360</y>
-      <width>121</width>
       <height>24</height>
      </rect>
     </property>
