@@ -13,6 +13,7 @@
 #include "account.h"
 #include "person.h"
 person asli;
+Account naAsli;
 Me::Me(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Me)
@@ -23,11 +24,13 @@ Me::Me(QWidget *parent) :
     database.setDatabaseName("d:\\appdb.db");
     database.open();
     QSqlQuery q;
-    q.exec("SELECT name FROM current_user");
-    QString Uname = q.value("username").toString();
-    asli.SETCURRENTaccount_id(Uname);
+    QString Uname = naAsli.GETCURRENTaccount_id();
+    //q.exec("SELECT username FROM current_user");
+    //QString Uname = q.value("username").toString();
     ui->lineEdit_2->setText(asli.GETfirst_name(Uname));
     ui->lineEdit_3->setText(asli.GETlast_name(Uname));
+    ui->lineEdit_4->setText(asli.GETemployment_type(Uname));
+    ui->lineEdit_5->setText(asli.GETskills(Uname));
 }
 
 Me::~Me()

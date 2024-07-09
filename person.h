@@ -9,7 +9,8 @@ class person : public Account
 {
      QString first_name;
      QString last_name;
-     QString skills;
+     QString skill;
+     QString employment_type;
 
 public:
     person();
@@ -17,6 +18,7 @@ public:
     QString GETfirst_name(QString);
     QString GETlast_name(QString);
     QString GETskills(QString);
+    QString GETemployment_type(QString);
 
     void SETfirst_name(QString);
     void SETlast_name(QString);

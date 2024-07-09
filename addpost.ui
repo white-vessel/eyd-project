@@ -61,12 +61,12 @@ background-color: rgb(89, 255, 200);</string>
        <string>add caption</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="capin">
+     <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>50</x>
         <y>150</y>
-        <width>241</width>
+        <width>271</width>
         <height>31</height>
        </rect>
       </property>

@@ -238,7 +238,7 @@ background-color: rgb(225, 242, 255);</string>
       </font>
      </property>
      <property name="text">
-      <string>birthdate:</string>
+      <string>skill:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
