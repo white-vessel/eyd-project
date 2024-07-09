@@ -282,6 +282,9 @@ background-color: rgb(225, 242, 255);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -292,6 +295,9 @@ background-color: rgb(225, 242, 255);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -302,6 +308,9 @@ background-color: rgb(225, 242, 255);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -312,6 +321,9 @@ background-color: rgb(225, 242, 255);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_5">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -325,6 +337,9 @@ background-color: rgb(225, 242, 255);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_6">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>80</x>

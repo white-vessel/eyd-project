@@ -14,9 +14,15 @@ Account::Account()
     database.setDatabaseName("d:\\appdb.db");
     database.open();
 }
-QString Account::GETaccount_id() {
-
-    return account_id;
+QString Account::GETaccount_id(QString id) {
+    QSqlQuery q;
+    q.exec("SELECT username FROM user WHERE username='"+id+"'");
+    if(q.first()){
+        return account_id=q.value("username").toString();
+    }
+    else{
+        return "No Username";
+    }
 }
 QString Account::GETphone_number(QString id){
     QSqlQuery q;
@@ -29,21 +35,36 @@ QString Account::GETphone_number(QString id){
     }
 
 }
-QString Account::GETemail(){
-    return email;
+QString Account::GETemail(QString id){
+    QSqlQuery q;
+    q.exec("SELECT email FROM user WHERE username='"+id+"'");
+    if(q.first()){
+        return email=q.value("email").toString();
+    }
+    else{
+        return "No Username";
+    }
 }
 
 void Account::SETaccount_id(QString id){
     account_id=id;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(username)VALUES('"+id+"')");
 }
 void Account::SETphone_number(QString num){
     phone_number=num;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(phone_number)VALUES('"+num+"')");
 }
 void Account::SETemail(QString mail){
     email=mail;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(email)VALUES('"+mail+"')");
 }
 void Account::SETpassword(QString pass){
     password=pass;
+    QSqlQuery q;
+    q.exec("INSERT INTO user(password)VALUES('"+pass+"')");
 }
 void Account::SETCURRENTaccount_id(QString Uname){
     QSqlQuery q;
