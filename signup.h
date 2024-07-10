@@ -26,6 +26,8 @@ private slots:
 
     void on_comboBox_activated(int index);
 
+    void on_checkBox_stateChanged(int arg1);
+
 private:
     Ui::signup *ui;
 };

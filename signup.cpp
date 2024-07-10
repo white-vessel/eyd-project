@@ -14,6 +14,7 @@
 #include "QsqlQueryModel"
 #include "foruser.h"//یوزرنیم
 QString b;
+bool ahah;
 signup::signup(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::signup)
@@ -175,5 +176,18 @@ void signup::on_comboBox_activated(int index)
        q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
         break;
     }
+}
+
+
+void signup::on_checkBox_stateChanged(int arg1)
+{
+    QString Uname;
+    Uname=ui->lineEdit->text();
+    QSqlQuery q;
+    if(arg1 == 0)
+
+
+    if(arg1 == 1)
+       q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
 }
 

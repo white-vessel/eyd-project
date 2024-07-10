@@ -214,30 +214,18 @@ color: rgb(0, 0, 0);</string>
      <string>Back</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>323</y>
-      <width>101</width>
-      <height>31</height>
+      <x>590</x>
+      <y>330</y>
+      <width>83</width>
+      <height>22</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-</string>
+    <property name="text">
+     <string>company?</string>
     </property>
-    <item>
-     <property name="text">
-      <string>user</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>company</string>
-     </property>
-    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
