@@ -5,6 +5,14 @@
 #include <iostream>
 #include "QMessageBox"
 #include "confirmprofile.h"
+#include "company_signup.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+
+#include "account.h"
 
 using namespace std;
 
@@ -17,6 +25,10 @@ code::code(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->lineEdit_2->setValidator(new QIntValidator);
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 
 }
 
@@ -44,9 +56,29 @@ void code::on_pushButton_clicked()
     }
     else
     {
-        confirmprofile *w=new confirmprofile;
+
+        QSqlQuery q;
+        Account a;
+        QString Uname=a.GETCURRENTaccount_id();
+        q.exec("SELECT is_company FROM user WHERE username='"+Uname+"'");
+
+             QString fn = q.value("is_company").toString();
+
+        if(fn=="company"){
+            company_signUp *w=new company_signUp;
+            w->show();
+            this->close();
+        }
+        else{
+            confirmprofile *w=new confirmprofile;
+            w->show();
+            this->close();
+        }
+
+
+       /* confirmprofile *w=new confirmprofile;
         w->show();
-        this->close();
+        this->close();*/
     }
 }
 

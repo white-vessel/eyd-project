@@ -80,7 +80,7 @@ void signup::on_pushButton_clicked()
     QSqlQuery q;
     QSqlQuery s;
 
-    QString che=ui->checkBox->text();
+    QString che=ui->lineEdit_9->text();
 
 
     QString a;
@@ -151,7 +151,7 @@ void signup::on_pushButton_clicked()
         }
     }
 
-<<<<<<< Updated upstream
+
     Account accc;
     accc.SETCURRENTaccount_id(Uname);
 
@@ -160,10 +160,9 @@ void signup::on_pushButton_clicked()
 
 
 
-=======
     Account acc;
     acc.SETCURRENTaccount_id(Uname);
->>>>>>> Stashed changes
+
 }
 
 
@@ -207,14 +206,8 @@ void signup::on_checkBox_stateChanged(int arg1)
 
 void signup::on_checkBox_clicked(bool checked)
 {
-    QString Uname;
-    Uname=ui->lineEdit->text();
-    QSqlQuery q;
-    QString ye="yes";
-    if(checked==true){
 
-        q.exec("INSERT INTO user(is_company)VALUES ('"+ye+"') WHERE username='"+Uname+"'");
-    }
+
 
 }
 
