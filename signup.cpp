@@ -13,7 +13,7 @@
 #include "QsqlDriver"
 #include "QsqlQuery"
 #include "QsqlQueryModel"
-#include "foruser.h"//یوزرنیم
+#include "foruser.h"یوزرنیم
 QString b;
 bool ahah;
 signup::signup(QWidget *parent) :
@@ -151,6 +151,7 @@ void signup::on_pushButton_clicked()
         }
     }
 
+<<<<<<< Updated upstream
     Account accc;
     accc.SETCURRENTaccount_id(Uname);
 
@@ -159,6 +160,10 @@ void signup::on_pushButton_clicked()
 
 
 
+=======
+    Account acc;
+    acc.SETCURRENTaccount_id(Uname);
+>>>>>>> Stashed changes
 }
 
 
