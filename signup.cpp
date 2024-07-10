@@ -8,6 +8,7 @@
 #include "QMessageBox"
 #include "account.h"
 #include "QComboBox"
+#include "QCheckBox"
 #include <QsqlDatabase>//دیتابیس
 #include "QsqlDriver"
 #include "QsqlQuery"
@@ -79,6 +80,8 @@ void signup::on_pushButton_clicked()
     QSqlQuery q;
     QSqlQuery s;
 
+    QString che=ui->checkBox->text();
+
 
     QString a;
     a = ui->lineEdit_8->text();
@@ -97,7 +100,7 @@ void signup::on_pushButton_clicked()
                 QMessageBox::warning(this,"erorr","this username already exist.");
             }
             else {
-                q.exec("INSERT INTO user(username)VALUES('"+Uname+"')");//same user fix
+                q.exec("INSERT INTO user(username,is_company)VALUES('"+Uname+"','"+che+"')");//same user fix
                 //تابع واسه ساخت ایدی
                 while (true) {
                     QString qstring_id = QString::number(id_count);
@@ -148,8 +151,13 @@ void signup::on_pushButton_clicked()
         }
     }
 
-    Account acc;
-    acc.SETCURRENTaccount_id(Uname);
+    Account accc;
+    accc.SETCURRENTaccount_id(Uname);
+
+
+
+
+
 
 }
 
@@ -189,5 +197,19 @@ void signup::on_checkBox_stateChanged(int arg1)
 
     if(arg1 == 1)
        q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
+}
+
+
+void signup::on_checkBox_clicked(bool checked)
+{
+    QString Uname;
+    Uname=ui->lineEdit->text();
+    QSqlQuery q;
+    QString ye="yes";
+    if(checked==true){
+
+        q.exec("INSERT INTO user(is_company)VALUES ('"+ye+"') WHERE username='"+Uname+"'");
+    }
+
 }
 

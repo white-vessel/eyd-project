@@ -6,11 +6,24 @@
 #include "me.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
+#include "account.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "foruser.h"//
+
+
 Messeging::Messeging(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Messeging)
 {
     ui->setupUi(this);
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 }
 
 Messeging::~Messeging()
@@ -63,5 +76,37 @@ void Messeging::on_pushButton_5_clicked()
     Me *w4 = new Me;
     w4->show();
     this->close();
+}
+
+
+void Messeging::on_pushButton_8_clicked()
+{
+     QSqlQuery q;
+
+
+
+    Account acc;
+    QString fromuser=acc.GETCURRENTaccount_id();
+    QString touser =ui->lineEdit_2->text();
+
+    q.exec("SELECT time2,from_user,to_user,chat FROM direct WHERE owner='"+fromuser+"' ORDER BY time2 DESC");
+    QSqlQueryModel *qm = new QSqlQueryModel;
+    qm->setQuery(q);
+    ui->tableView->setModel(qm);
+
+
+}
+
+
+void Messeging::on_pushButton_6_clicked()
+{
+    Account acc;
+    QString fromuser=acc.GETCURRENTaccount_id();
+    QSqlQuery q;
+
+    QString txt=ui->lineEdit_3->text();
+
+    QString touser =ui->lineEdit_2->text();
+    q.exec("INSERT INTO direct(time1,chat,from_user,to_user,owner)VALUES (time('now'),'"+txt+"','"+fromuser+"','"+touser+"')");
 }
 

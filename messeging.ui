@@ -181,19 +181,6 @@ background-color: rgb(149, 223, 255);</string>
     <property name="title">
      <string/>
     </property>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>390</y>
-       <width>331</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="placeholderText">
-      <string>enter your message...</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
@@ -207,16 +194,65 @@ background-color: rgb(149, 223, 255);</string>
       <string>send</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_2">
+    <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>43</x>
-       <y>30</y>
+       <x>45</x>
+       <y>20</y>
        <width>381</width>
-       <height>361</height>
+       <height>371</height>
       </rect>
      </property>
     </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>390</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>430</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>160</y>
+      <width>113</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>to_user</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>160</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SET</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

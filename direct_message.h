@@ -7,6 +7,8 @@ class direct_message : public content
 {
 public:
     direct_message();
+    void SETowner();
+    void SENDmessage();
 };
 
 #endif // DIRECT_MESSAGE_H

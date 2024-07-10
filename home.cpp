@@ -14,6 +14,7 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "foruser.h"//
+#include "person.h"
 
 Home::Home(QWidget *parent) :
     QMainWindow(parent),
@@ -88,11 +89,13 @@ void Home::on_pushButton_6_clicked()
 
 void Home::on_pushButton_7_clicked()
 {
-    Account a;
-    QString cuser=a.GETCURRENTaccount_id();
-
+    person a;
+    Account b;
     QSqlQuery q;
-    q.exec("SELECT time1,caption,username FROM post ORDER BY time1 DESC");
+    QString cuser=b.GETCURRENTaccount_id();
+    QString f =a.GETfirst_name("ali021");
+
+    q.exec("SELECT time1,caption,username FROM post WHERE username='ali021' ORDER BY time1 DESC");
     QSqlQueryModel *qm = new QSqlQueryModel;
     qm->setQuery(q);
     ui->tableView->setModel(qm);

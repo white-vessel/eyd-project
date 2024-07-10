@@ -54,11 +54,11 @@ ui->textEdit->setText("txt");*/
 
 void addPost::on_addImagePsh_clicked()
 {
-    /*QString path = ui->filepth->text();
+    QString path = ui->filepth->text();
     QPixmap image(path);
     ui->label->setPixmap(image);
 
-    posts.SETimage_path(path);*/
+    posts.SETimage_path(path);
     //QSqlQuery q;
     //QString cuser;
     //cuser=acc.GETCURRENTaccount_id();
