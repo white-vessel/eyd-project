@@ -19,10 +19,12 @@ Me::Me(QWidget *parent) :
     ui(new Ui::Me)
 {
     ui->setupUi(this);
-    QSqlDatabase database;//دیتابیس
+
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
+
     QSqlQuery q;
     QString Uname = naAsli.GETCURRENTaccount_id();
     //q.exec("SELECT username FROM current_user");

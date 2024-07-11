@@ -9,10 +9,10 @@
 
 Account::Account()
 {
-    QSqlDatabase database;//دیتابیس
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 }
 QString Account::GETaccount_id(QString id) {
     QSqlQuery q;

@@ -20,10 +20,11 @@ Messeging::Messeging(QWidget *parent) :
     ui(new Ui::Messeging)
 {
     ui->setupUi(this);
-    QSqlDatabase database;//دیتابیس
+
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 }
 
 Messeging::~Messeging()
@@ -94,7 +95,7 @@ void Messeging::on_pushButton_7_clicked()
     QSqlQuery d;
    Account acc;
    QString cuser=acc.GETCURRENTaccount_id();
-   d.exec("SELECT time2,from_user,to_user,chat FROM direct WHERE from_user='"+cuser+"' OR  to_user='"+cuser+"' ORDER BY time2 ASC");
+   d.exec("SELECT from_user,chat,time2 FROM direct WHERE from_user='"+cuser+"' OR  to_user='"+cuser+"' ORDER BY time2 ASC");
    QSqlQueryModel *qn = new QSqlQueryModel;
    qn->setQuery(d);
    ui->tableView->setModel(qn);

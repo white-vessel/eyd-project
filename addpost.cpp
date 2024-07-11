@@ -29,10 +29,10 @@ addPost::addPost(QWidget *parent) :
     ui->setupUi(this);
     this->centralWidget()->setStyleSheet(
              "background-image:url(\"bkg.jpg\"); background-position: center;" );
-    QSqlDatabase database;//دیتابیس
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 }
 
 addPost::~addPost()

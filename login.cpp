@@ -38,10 +38,10 @@ LogIn::LogIn(QWidget *parent) :
     }
     ui->lineEdit_7->setText(c);
 
-    QSqlDatabase database;//دیتابیس
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 
 }
 

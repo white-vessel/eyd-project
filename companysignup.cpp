@@ -21,10 +21,10 @@ companySignUp::companySignUp(QWidget *parent) :
     ui->setupUi(this);
     ui->lineEdit_7->setEnabled(false);
 
-    QSqlDatabase database;//دیتابیس
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 
 
     int a;

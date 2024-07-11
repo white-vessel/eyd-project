@@ -24,10 +24,12 @@ Home::Home(QWidget *parent) :
     ui(new Ui::Home)
 {
     ui->setupUi(this);
-    QSqlDatabase database;//دیتابیس
+
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
+
     QSqlQuery q;
     q.exec("SELECT caption FROM post");
     q.exec("SELECT caption FROM post");
