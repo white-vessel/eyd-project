@@ -133,7 +133,7 @@ void signup::on_pushButton_clicked()
                 QString pass;
                 pass=ui->lineEdit_6->text();
                 q.exec("UPDATE  user SET password = '"+pass+"' WHERE username='"+Uname+"'");//password not going to db fix
-                q.exec("UPDATE user SET is_company= 1 WHERE username='"+Uname+"'");
+                q.exec("UPDATE  user SET is_company=0 WHERE username='"+Uname+"'");
                 code *w2=new code;
                 w2->show();
                 this->close();
