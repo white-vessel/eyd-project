@@ -6,12 +6,22 @@
 #include "QMessageBox"
 #include "login.h"
 #include "signup.h"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "foruser.h"//
+#include "companysignup.h"
 
 welcome::welcome(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::welcome)
 {
     ui->setupUi(this);
+    QSqlDatabase database;//دیتابیس
+    database=QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("d:\\appdb.db");
+    database.open();
 
 }
 welcome::~welcome()
@@ -35,4 +45,12 @@ void welcome::on_pushButton2_clicked()
     this->close();
 }
 
+
+
+void welcome::on_pushButton_2_clicked()
+{
+    companySignUp *sa = new companySignUp;
+    sa->show();
+    this->close();
+}
 

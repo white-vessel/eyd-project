@@ -1,5 +1,5 @@
-#include "signup.h"
-#include "ui_signup.h"
+#include "companysignup.h"
+#include "ui_companysignup.h"
 #include "QString"
 #include "QMessageBox"
 #include "welcome.h"
@@ -12,11 +12,11 @@
 #include "QsqlDriver"
 #include "QsqlQuery"
 #include "QsqlQueryModel"
-#include "foruser.h"//یوزرنیم
-QString bi;
-signup::signup(QWidget *parent) :
+#include "foruser.h"//
+QString b;
+companySignUp::companySignUp(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::signup)
+    ui(new Ui::companySignUp)
 {
     ui->setupUi(this);
     ui->lineEdit_7->setEnabled(false);
@@ -34,43 +34,22 @@ signup::signup(QWidget *parent) :
         a = rand()%26;
         if(r ==1)
         {
-            bi[i] = 'a'+a;
+            b[i] = 'a'+a;
         }
         if(r==0)
         {
-            bi[i]= 'A'+a;
+            b[i]= 'A'+a;
         }
     }
-    ui->lineEdit_7->setText(bi);
+    ui->lineEdit_7->setText(b);
 }
-signup::~signup()
+
+companySignUp::~companySignUp()
 {
     delete ui;
-
 }
 
-void signup::on_pushButton_2_clicked()
-{
-    int a;
-    for(int i = 0; i<5; i++ )
-    {
-        int r = rand()%2;
-        a = rand()%26;
-        if(r ==1)
-        {
-            bi[i] = 'a'+a;
-        }
-        if(r==0)
-        {
-            bi[i]= 'A'+a;
-        }
-    }
-    ui->lineEdit_7->setText(bi);
-
-}
-
-
-void signup::on_pushButton_clicked()
+void companySignUp::on_pushButton_clicked()
 {
     QString Uname;
     int id_count=1;
@@ -83,7 +62,7 @@ void signup::on_pushButton_clicked()
     a = ui->lineEdit_8->text();
     for (int i = 0; i<5 ;i++ )
     {
-        if(bi[i] != a[i])
+        if(b[i] != a[i])
         {
             QMessageBox::warning(this,"wrong captcha!","you entered a wrong captcha!","ok");
             break;
@@ -97,8 +76,7 @@ void signup::on_pushButton_clicked()
             }
             else {
                 q.exec("INSERT INTO user(username)VALUES('"+Uname+"')");//same user fix
-                //
-                q.exec("INSERT INTO user(is_company)VALUES(1)");
+                //تابع واسه ساخت ایدی
                 while (true) {
                     QString qstring_id = QString::number(id_count);
                     s.exec("SELECT id FROM user WHERE id='"+qstring_id+"'");
@@ -133,7 +111,7 @@ void signup::on_pushButton_clicked()
                 QString pass;
                 pass=ui->lineEdit_6->text();
                 q.exec("UPDATE  user SET password = '"+pass+"' WHERE username='"+Uname+"'");//password not going to db fix
-                q.exec("UPDATE user SET is_company= 1 WHERE username='"+Uname+"'");
+                q.exec("UPDATE user SET is_company=1 WHERE user=('"+Uname+"'");
                 code *w2=new code;
                 w2->show();
                 this->close();
@@ -154,14 +132,30 @@ void signup::on_pushButton_clicked()
 }
 
 
-void signup::on_pushButton_3_clicked()
+void companySignUp::on_pushButton_2_clicked()
+{
+    int a;
+    for(int i = 0; i<5; i++ )
+    {
+        int r = rand()%2;
+        a = rand()%26;
+        if(r ==1)
+        {
+            b[i] = 'a'+a;
+        }
+        if(r==0)
+        {
+            b[i]= 'A'+a;
+        }
+    }
+    ui->lineEdit_7->setText(b);
+}
+
+
+void companySignUp::on_pushButton_3_clicked()
 {
     welcome *w=new welcome;
     w->show();
     this->close();
-
 }
-
-
-
 

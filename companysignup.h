@@ -1,5 +1,5 @@
-#ifndef COMPANYHOME_H
-#define COMPANYHOME_H
+#ifndef COMPANYSIGNUP_H
+#define COMPANYSIGNUP_H
 
 #include <QMainWindow>
 
@@ -16,20 +16,14 @@ public:
     ~companySignUp();
 
 private slots:
-    void on_homePushButton_clicked();
+    void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
 
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_clicked();
-
 private:
     Ui::companySignUp *ui;
 };
 
-#endif // COMPANYHOME_H
+#endif // COMPANYSIGNUP_H

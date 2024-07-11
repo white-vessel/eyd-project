@@ -16,7 +16,7 @@ SOURCES += \
     comment.cpp \
     commentui.cpp \
     company.cpp \
-    companyhome.cpp \
+    companysignup.cpp \
     confirmprofile.cpp \
     content.cpp \
     direct_message.cpp \
@@ -46,7 +46,7 @@ HEADERS += \
     comment.h \
     commentui.h \
     company.h \
-    companyhome.h \
+    companysignup.h \
     confirmprofile.h \
     content.h \
     direct_message.h \
@@ -72,7 +72,7 @@ FORMS += \
     addpost.ui \
     code.ui \
     commentui.ui \
-    companyhome.ui \
+    companysignup.ui \
     confirmprofile.ui \
     home.ui \
     jobs_admin.ui \
