@@ -14,7 +14,11 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "foruser.h"//
-
+#include "QLabel"
+#include "QLineEdit"
+#include "QVBoxLayout"
+#include "QPixmap"
+#include "QPushButton"
 Home::Home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Home)
@@ -24,6 +28,29 @@ Home::Home(QWidget *parent) :
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
     database.open();
+    QSqlQuery q;
+    q.exec("SELECT caption FROM post");
+    QVBoxLayout *lay = new QVBoxLayout(this);
+    for (int i = 0; i<10 ;i++ ) {
+        /*QString path = "D:\javad\photo_2024-07-07_20-53-15.jpg";
+        QPixmap image(path);
+        QLabel *aks = new QLabel("hhhhhhhhhh");
+        aks->setPixmap(image);*/
+        q.exec("SELECT caption FROM post");
+        QString fn;
+        if(q.next())
+        {
+             fn = q.value(i).toString();
+        }
+        QLineEdit *payam = new QLineEdit(fn);
+        payam->setEnabled(false);
+        QPushButton *shw = new QPushButton("show post");
+        //lay->addWidget(aks);
+        lay->addWidget(payam);
+        lay->addWidget(shw);
+
+    }
+    ui->scrollContents->setLayout(lay);
 }
 
 Home::~Home()
