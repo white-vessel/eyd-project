@@ -162,18 +162,5 @@ void signup::on_pushButton_3_clicked()
 }
 
 
-void signup::on_comboBox_activated(int index)
-{
-    QString Uname;
-    Uname=ui->lineEdit->text();
-    QSqlQuery q;
-    switch (index) {
-    case 0:
-        q.exec("INSERT INTO user(is_company) VALUES '0' WHERE username='"+Uname+"'");
-        break;
-    case 1:
-       q.exec("INSERT INTO user(is_company) VALUES '1' WHERE username='"+Uname+"'");
-        break;
-    }
-}
+
 
