@@ -174,26 +174,13 @@ background-color: rgb(149, 223, 255);</string>
      <rect>
       <x>260</x>
       <y>90</y>
-      <width>441</width>
+      <width>461</width>
       <height>431</height>
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>390</y>
-       <width>331</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="placeholderText">
-      <string>enter your message...</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
@@ -207,16 +194,52 @@ background-color: rgb(149, 223, 255);</string>
       <string>send</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_2">
+    <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>43</x>
+       <x>35</x>
        <y>30</y>
-       <width>381</width>
+       <width>391</width>
        <height>361</height>
       </rect>
      </property>
     </widget>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>393</y>
+       <width>331</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>190</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>refresh</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>150</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>to user</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
