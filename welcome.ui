@@ -14,7 +14,8 @@
    <string>welcome</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/new/prefix1/welcome1.jpg);</string>
+   <string notr="true">background-image: url(:/new/prefix1/welcome1.jpg);
+color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -68,9 +69,9 @@
    <widget class="QPushButton" name="pushButton2">
     <property name="geometry">
      <rect>
-      <x>590</x>
+      <x>559</x>
       <y>470</y>
-      <width>80</width>
+      <width>111</width>
       <height>25</height>
      </rect>
     </property>
@@ -88,7 +89,7 @@
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>sign up</string>
+     <string> sign up(user)</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit">
@@ -116,6 +117,26 @@
     </property>
     <property name="plainText">
      <string>post your job for millions of people to see!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>389</x>
+      <y>470</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>sign up(company)</string>
     </property>
    </widget>
   </widget>

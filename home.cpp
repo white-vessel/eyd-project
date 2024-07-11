@@ -30,17 +30,17 @@ Home::Home(QWidget *parent) :
     database.open();
     QSqlQuery q;
     q.exec("SELECT caption FROM post");
+    q.exec("SELECT caption FROM post");
     QVBoxLayout *lay = new QVBoxLayout(this);
     for (int i = 0; i<10 ;i++ ) {
         /*QString path = "D:\javad\photo_2024-07-07_20-53-15.jpg";
         QPixmap image(path);
         QLabel *aks = new QLabel("hhhhhhhhhh");
         aks->setPixmap(image);*/
-        q.exec("SELECT caption FROM post");
         QString fn;
-        if(q.next())
+        if(q.first())
         {
-             fn = q.value(i).toString();
+             fn = q.value("caption").toString();
         }
         QLineEdit *payam = new QLineEdit(fn);
         payam->setEnabled(false);
