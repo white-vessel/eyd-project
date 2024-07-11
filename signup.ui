@@ -214,31 +214,6 @@ color: rgb(0, 0, 0);</string>
      <string>Back</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>323</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>user</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>company</string>
-     </property>
-    </item>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

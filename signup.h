@@ -23,9 +23,6 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_3_clicked();
-
-    void on_comboBox_activated(int index);
-
 private:
     Ui::signup *ui;
 };
