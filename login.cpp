@@ -107,7 +107,7 @@ void LogIn::on_pushButton_clicked()
            }
            Account a;
            //a.SETCURRENTaccount_id(Uname);
-           QString ico=a.GETis_company();
+           QString ico=a.GETis_company(Uname);
             q.exec("DELETE FROM current_user ");
             q.exec("INSERT INTO current_user(username,is_company)VALUES('"+Uname+"','"+ico+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
 
