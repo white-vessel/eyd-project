@@ -11,7 +11,7 @@
 #include "QPushButton"
 #include "QLineEdit"
 #include "QVBoxLayout"
-
+#include "mecompany.h"
 Jobs_Admin::Jobs_Admin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_Admin)
@@ -83,6 +83,10 @@ void Jobs_Admin::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
+    this->close();
+    //inja bayad compony va carbar fargh kone:
+    MeCompany *wr = new MeCompany;
+    wr->show();
     this->close();
 }
 

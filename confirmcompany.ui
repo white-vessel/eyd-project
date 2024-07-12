@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(151, 236, 255);
+background-image: url(:/new/prefix1/confirm profile1.jpg);
 color: rgb(0, 0, 0);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -54,7 +55,7 @@ color: rgb(0, 0, 0);</string>
       <x>390</x>
       <y>0</y>
       <width>321</width>
-      <height>101</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -95,7 +96,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>120</x>
       <y>220</y>
-      <width>55</width>
+      <width>41</width>
       <height>16</height>
      </rect>
     </property>
@@ -115,7 +116,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>120</x>
       <y>320</y>
-      <width>81</width>
+      <width>71</width>
       <height>20</height>
      </rect>
     </property>

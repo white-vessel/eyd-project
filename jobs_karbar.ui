@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>962</width>
+    <width>941</width>
     <height>600</height>
    </rect>
   </property>
@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/log in 1.jpg);
 background-color: rgb(192, 255, 175);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -172,10 +173,10 @@ background-color: rgb(192, 255, 175);</string>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>19</x>
-      <y>120</y>
-      <width>891</width>
-      <height>401</height>
+      <x>20</x>
+      <y>90</y>
+      <width>581</width>
+      <height>431</height>
      </rect>
     </property>
     <property name="title">
@@ -187,7 +188,7 @@ background-color: rgb(192, 255, 175);</string>
        <x>10</x>
        <y>10</y>
        <width>541</width>
-       <height>391</height>
+       <height>371</height>
       </rect>
      </property>
      <property name="widgetResizable">
@@ -199,7 +200,7 @@ background-color: rgb(192, 255, 175);</string>
         <x>0</x>
         <y>0</y>
         <width>539</width>
-        <height>389</height>
+        <height>369</height>
        </rect>
       </property>
       <widget class="QGroupBox" name="groupBox_3">
@@ -683,7 +684,7 @@ background-color: rgb(192, 255, 175);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>962</width>
+     <width>941</width>
      <height>25</height>
     </rect>
    </property>

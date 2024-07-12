@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1212</width>
+    <width>1020</width>
     <height>624</height>
    </rect>
   </property>
@@ -193,8 +193,8 @@ background-color: rgb(162, 203, 203);</string>
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>540</y>
+      <x>420</x>
+      <y>560</y>
       <width>80</width>
       <height>25</height>
      </rect>
@@ -206,20 +206,20 @@ background-color: rgb(162, 203, 203);</string>
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>190</y>
-      <width>411</width>
-      <height>371</height>
+      <x>480</x>
+      <y>140</y>
+      <width>451</width>
+      <height>401</height>
      </rect>
     </property>
    </widget>
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>130</y>
-      <width>471</width>
-      <height>381</height>
+      <x>20</x>
+      <y>140</y>
+      <width>411</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -230,8 +230,8 @@ background-color: rgb(162, 203, 203);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>469</width>
-       <height>379</height>
+       <width>409</width>
+       <height>399</height>
       </rect>
      </property>
     </widget>

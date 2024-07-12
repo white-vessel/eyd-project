@@ -28,6 +28,7 @@ SOURCES += \
     login.cpp \
     main.cpp \
     me.cpp \
+    mecompany.cpp \
     messeging.cpp \
     my_network_admin.cpp \
     my_networks_karbar.cpp \
@@ -58,6 +59,7 @@ HEADERS += \
     like.h \
     login.h \
     me.h \
+    mecompany.h \
     messeging.h \
     my_network_admin.h \
     my_networks_karbar.h \
@@ -82,6 +84,7 @@ FORMS += \
     jobs_karbar.ui \
     login.ui \
     me.ui \
+    mecompany.ui \
     messeging.ui \
     my_network_admin.ui \
     my_networks_karbar.ui \

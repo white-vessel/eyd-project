@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/code.jpg);
 background-color: rgb(117, 139, 113);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -187,6 +188,11 @@ background-color: rgb(117, 139, 113);</string>
       <width>55</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>following</string>
