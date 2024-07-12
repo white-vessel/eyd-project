@@ -7,6 +7,13 @@
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
 #include "account.h"
+#include "network.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+
 My_Networks_karbar::My_Networks_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_Networks_karbar)
@@ -80,5 +87,52 @@ void My_Networks_karbar::on_pushButton_5_clicked()
     Me *w4 = new Me;
     w4->show();
     this->close();
+}
+
+
+void My_Networks_karbar::on_pushButton_6_clicked()
+{
+    QString addf=ui->lineEdit_2->text();
+    network a;
+    a.follow(addf);
+
+
+}
+
+
+void My_Networks_karbar::on_pushButton_7_clicked()
+{
+    QString addf=ui->lineEdit_2->text();
+    network a;
+    a.unfollow(addf);
+}
+
+
+void My_Networks_karbar::on_pushButton_8_clicked()
+{
+   QSqlQuery d;
+   QSqlQuery q;
+   Account acc;
+   QString cuser=acc.GETCURRENTaccount_id();
+   d.exec("SELECT follow FROM network WHERE username='"+cuser+"'");
+   QSqlQueryModel *qn = new QSqlQueryModel;
+   qn->setQuery(d);
+   ui->tableView->setModel(qn);
+   q.exec("SELECT username FROM network WHERE follow='"+cuser+"'");
+   QSqlQueryModel *qm = new QSqlQueryModel;
+   qm->setQuery(q);
+   ui->tableView_2->setModel(qm);
+}
+
+
+
+
+void My_Networks_karbar::on_pushButton_9_clicked()
+{
+    QSqlQuery q;
+    Account a;
+    QString cuser=a.GETCURRENTaccount_id();
+    QString addf=ui->lineEdit_2->text();
+    q.exec("DELETE FROM network WHERE username ='"+addf+"' AND follow='"+cuser+"'");
 }
 

@@ -31,6 +31,7 @@ SOURCES += \
     messeging.cpp \
     my_network_admin.cpp \
     my_networks_karbar.cpp \
+    network.cpp \
     person.cpp \
     post.cpp \
     signup.cpp \
@@ -60,6 +61,7 @@ HEADERS += \
     messeging.h \
     my_network_admin.h \
     my_networks_karbar.h \
+    network.h \
     person.h \
     post.h \
     signup.h \
@@ -93,6 +95,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    back.qrc \
     cinfirmprofile.qrc \
     code.qrc \
     hime.qrc \

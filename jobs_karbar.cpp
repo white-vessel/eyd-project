@@ -90,13 +90,13 @@ void Jobs_karbar::on_homePushButton_clicked()
 void Jobs_karbar::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
-    if(isco == 0){
+    QString isco =a.GETCURRENTis_company();
+    if(isco == "0"){
     Jobs_karbar *w5 = new Jobs_karbar;
     w5->show();
     this->close();
     }
-    else{
+    if(isco== "1"){
     Jobs_Admin *w2 = new Jobs_Admin;
     w2->show();
     this->close();
@@ -110,7 +110,7 @@ void Jobs_karbar::on_pushButton_2_clicked()
 void Jobs_karbar::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();

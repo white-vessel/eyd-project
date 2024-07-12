@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/welcome1.jpg);
 background-color: rgb(162, 203, 203);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -216,9 +217,9 @@ background-color: rgb(162, 203, 203);</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>110</y>
+      <y>130</y>
       <width>471</width>
-      <height>401</height>
+      <height>381</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -230,23 +231,10 @@ background-color: rgb(162, 203, 203);</string>
        <x>0</x>
        <y>0</y>
        <width>469</width>
-       <height>399</height>
+       <height>379</height>
       </rect>
      </property>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>970</x>
-      <y>100</y>
-      <width>211</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

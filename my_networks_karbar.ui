@@ -189,7 +189,7 @@ background-color: rgb(130, 173, 133);</string>
      </rect>
     </property>
     <property name="text">
-     <string>requests</string>
+     <string>followings</string>
     </property>
    </widget>
    <widget class="QTableView" name="tableView_2">
@@ -205,50 +205,79 @@ background-color: rgb(130, 173, 133);</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>350</x>
       <y>170</y>
-      <width>55</width>
-      <height>16</height>
+      <width>71</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Suggests</string>
+     <string>followers</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>300</y>
+      <x>610</x>
+      <y>220</y>
       <width>113</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>enter a user here</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>340</y>
+      <y>290</y>
       <width>80</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>follow</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>370</y>
+      <y>260</y>
       <width>80</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>unfollow</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>410</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>refresh</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>320</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>block</string>
     </property>
    </widget>
   </widget>

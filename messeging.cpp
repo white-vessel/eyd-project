@@ -14,13 +14,14 @@
 #include "QsqlQueryModel"
 #include "foruser.h"//
 
+QString touser;
 
 Messeging::Messeging(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Messeging)
 {
     ui->setupUi(this);
-
+    touser=ui->lineEdit_2->text();
     /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
@@ -100,7 +101,7 @@ void Messeging::on_pushButton_6_clicked()
     Account acc;
     QString fromuser=acc.GETCURRENTaccount_id();
     QSqlQuery q;
-    QString touser = ui->lineEdit_2->text();
+
     QString txt=ui->lineEdit_3->text();
     q.exec("INSERT INTO direct(chat,to_user,from_user,time2)VALUES ('"+txt+"','"+touser+"','"+fromuser+"',time('now'))");
 }
@@ -108,10 +109,10 @@ void Messeging::on_pushButton_6_clicked()
 
 void Messeging::on_pushButton_7_clicked()
 {
-    QSqlQuery d;
+   QSqlQuery d;
    Account acc;
    QString cuser=acc.GETCURRENTaccount_id();
-   d.exec("SELECT from_user,chat,time2 FROM direct WHERE from_user='"+cuser+"' OR  to_user='"+cuser+"' ORDER BY time2 ASC");
+   d.exec("SELECT from_user,chat,time2 FROM direct WHERE from_user='"+cuser+"' OR  to_user='"+cuser+"' AND from_user='"+touser+"' OR  to_user='"+touser+"' ORDER BY time2 ASC");
    QSqlQueryModel *qn = new QSqlQueryModel;
    qn->setQuery(d);
    ui->tableView->setModel(qn);
