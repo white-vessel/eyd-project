@@ -6,7 +6,8 @@
 #include "me.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
-#include"account.h"
+#include "account.h"
+#include "mecompany.h"
 My_network_Admin::My_network_Admin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_network_Admin)
@@ -79,6 +80,10 @@ void My_network_Admin::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
+    this->close();
+    //inja bayad compony va carbar fargh kone:
+    MeCompany *wr = new MeCompany;
+    wr->show();
     this->close();
 }
 

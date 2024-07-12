@@ -7,6 +7,7 @@
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
 #include "account.h"
+#include "mecompany.h"
 My_Networks_karbar::My_Networks_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_Networks_karbar)
@@ -79,6 +80,10 @@ void My_Networks_karbar::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
+    this->close();
+    //inja bayad compony va carbar fargh kone:
+    MeCompany *wr = new MeCompany;
+    wr->show();
     this->close();
 }
 

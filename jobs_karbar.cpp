@@ -12,6 +12,7 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "foruser.h"//
+#include "mecompany.h"
 Jobs_karbar::Jobs_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_karbar)
@@ -90,7 +91,7 @@ void Jobs_karbar::on_homePushButton_clicked()
 void Jobs_karbar::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco == 0){
     Jobs_karbar *w5 = new Jobs_karbar;
     w5->show();
@@ -110,7 +111,7 @@ void Jobs_karbar::on_pushButton_2_clicked()
 void Jobs_karbar::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();
@@ -139,6 +140,10 @@ void Jobs_karbar::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
+    this->close();
+    //inja bayad compony va carbar fargh kone:
+    MeCompany *wr = new MeCompany;
+    wr->show();
     this->close();
 }
 

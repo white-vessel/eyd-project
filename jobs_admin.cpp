@@ -11,7 +11,7 @@
 #include "QPushButton"
 #include "QLineEdit"
 #include "QVBoxLayout"
-
+#include "mecompany.h"
 Jobs_Admin::Jobs_Admin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_Admin)
@@ -34,7 +34,7 @@ void Jobs_Admin::on_homePushButton_clicked()
 void Jobs_Admin::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco == 0){
     Jobs_karbar *w5 = new Jobs_karbar;
     w5->show();
@@ -54,7 +54,7 @@ void Jobs_Admin::on_pushButton_2_clicked()
 void Jobs_Admin::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();
@@ -83,6 +83,10 @@ void Jobs_Admin::on_pushButton_5_clicked()
 {
     Me *w4 = new Me;
     w4->show();
+    this->close();
+    //inja bayad compony va carbar fargh kone:
+    MeCompany *wr = new MeCompany;
+    wr->show();
     this->close();
 }
 

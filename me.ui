@@ -28,7 +28,7 @@ background-color: rgb(225, 242, 255);</string>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string/>
     </property>
     <widget class="QPushButton" name="homePushButton">
      <property name="geometry">
@@ -263,7 +263,7 @@ background-color: rgb(225, 242, 255);</string>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -276,7 +276,7 @@ background-color: rgb(225, 242, 255);</string>
     </widget>
     <widget class="QLineEdit" name="lineEdit_3">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -289,7 +289,7 @@ background-color: rgb(225, 242, 255);</string>
     </widget>
     <widget class="QLineEdit" name="lineEdit_4">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -302,7 +302,7 @@ background-color: rgb(225, 242, 255);</string>
     </widget>
     <widget class="QLineEdit" name="lineEdit_5">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
