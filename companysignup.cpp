@@ -127,7 +127,21 @@ void companySignUp::on_pushButton_clicked()
     }
 
     Account acc;
-    acc.SETCURRENTaccount_id(Uname);
+    Account iacc;
+    //acc.SETCURRENTaccount_id(Uname);
+    //iacc.SETis_company("1");
+
+    QSqlQuery d;
+    d.exec("SELECT username FROM current_user");
+    if(d.first()){
+        d.exec("DELETE FROM current_user ");
+        d.exec("INSERT INTO current_user(username,is_company)VALUES('"+Uname+"','1')");
+        d.finish();
+    }
+    else{
+        d.exec("INSERT INTO current_user(username,is_company)VALUES('"+Uname+"','1')");//need check for delete everytime
+        d.finish();
+    }
 
 }
 

@@ -20,7 +20,6 @@ SOURCES += \
     confirmcompany.cpp \
     confirmprofile.cpp \
     content.cpp \
-    direct_message.cpp \
     home.cpp \
     job.cpp \
     jobs_admin.cpp \
@@ -51,7 +50,6 @@ HEADERS += \
     confirmcompany.h \
     confirmprofile.h \
     content.h \
-    direct_message.h \
     home.h \
     job.h \
     jobs_admin.h \

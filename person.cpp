@@ -5,10 +5,10 @@
 #include "QsqlQueryModel"
 person::person()
 {
-    QSqlDatabase database;//دیتابیس
+    /*QSqlDatabase database;//دیتابیس
     database=QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("d:\\appdb.db");
-    database.open();
+    database.open();*/
 }
 QString person::GETfirst_name(QString id){
     QSqlQuery q;

@@ -69,12 +69,15 @@ void Account::SETpassword(QString pass){
 void Account::SETCURRENTaccount_id(QString Uname){
     QSqlQuery q;
     q.exec("SELECT username FROM current_user");
+
     if(q.first()){
         q.exec("DELETE FROM current_user ");
         q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");
+        q.finish();
     }
     else{
         q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//need check for delete everytime
+        q.finish();
     }
 
 }
@@ -88,5 +91,31 @@ QString Account::GETCURRENTaccount_id(){
     }
     else{
         return "nocurrentuser";
+    }
+}
+
+void Account::SETis_company(QString ico){
+    QSqlQuery q;
+        q.exec("SELECT is_company FROM current_user");
+        if(q.first()){
+            q.exec("DELETE FROM current_user ");
+            q.exec("INSERT INTO current_user(is_company)VALUES('"+ico+"')");
+            q.finish();
+        }
+        else{
+            q.exec("INSERT INTO current_user(is_company)VALUES('"+ico+"')");//need check for delete everytime
+            q.finish();
+        }
+}
+
+QString Account::GETis_company(){
+    QSqlQuery q;
+    q.exec("SELECT is_company FROM current_user");
+    if(q.first()){
+        QString iscompany=q.value("is_company").toString();
+        return iscompany;
+    }
+    else{
+        return "nocurrentis_company";
     }
 }

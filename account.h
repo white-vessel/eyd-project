@@ -22,13 +22,15 @@ public:
     QString GETaccount_id(QString);
     QString GETphone_number(QString);
     QString GETemail(QString);
-    QString GETCURRENTaccount_id();//waiting for seyed
+    QString GETCURRENTaccount_id();
+    QString GETis_company();
 
     void SETCURRENTaccount_id(QString);
     void SETaccount_id(QString);
     void SETphone_number(QString);
     void SETemail(QString);
     void SETpassword(QString);
+    void SETis_company(QString);
 
     Account();
 };

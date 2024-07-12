@@ -106,8 +106,10 @@ void LogIn::on_pushButton_clicked()
            this->close();
            }
            Account a;
-           a.SETCURRENTaccount_id(Uname);
-            //q.exec("INSERT INTO current_user(username)VALUES('"+Uname+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
+           //a.SETCURRENTaccount_id(Uname);
+           QString ico=a.GETis_company();
+            q.exec("DELETE FROM current_user ");
+            q.exec("INSERT INTO current_user(username,is_company)VALUES('"+Uname+"','"+ico+"')");//ورود به صفحه هوم با انتقال آیدی به دیتابیس
 
        }
        else{
