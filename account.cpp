@@ -108,14 +108,25 @@ void Account::SETis_company(QString ico){
         }
 }
 
-QString Account::GETis_company(){
+QString Account::GETis_company(QString Uname){
     QSqlQuery q;
-    q.exec("SELECT is_company FROM current_user");
+    q.exec("SELECT is_company FROM user WHERE username = '"+Uname+"'");
     if(q.first()){
         QString iscompany=q.value("is_company").toString();
         return iscompany;
     }
     else{
         return "nocurrentis_company";
+    }
+}
+QString Account::GETCURRENTis_company(){
+    QSqlQuery q;
+    q.exec("SELECT is_company FROM current_user");
+    if(q.first()){
+        QString is_company=q.value("is_company").toString();
+        return is_company;
+    }
+    else{
+        return "no_current_is_company";
     }
 }

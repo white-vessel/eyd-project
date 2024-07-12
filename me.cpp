@@ -51,7 +51,7 @@ void Me::on_homePushButton_clicked()
 void Me::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         My_Networks_karbar *w1 = new My_Networks_karbar;
         w1->show();
@@ -71,7 +71,7 @@ void Me::on_pushButton_2_clicked()
 void Me::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();

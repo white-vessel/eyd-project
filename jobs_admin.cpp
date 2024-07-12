@@ -8,17 +8,11 @@
 #include "home.h"
 #include "addjob.h"
 #include "account.h"
-#include "QPushButton"
-#include "QLineEdit"
-#include "QVBoxLayout"
-
 Jobs_Admin::Jobs_Admin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_Admin)
 {
     ui->setupUi(this);
-    //QVBoxLayout *lay = new QVBoxLayout(this);
-
 }
 
 Jobs_Admin::~Jobs_Admin()
@@ -34,16 +28,16 @@ void Jobs_Admin::on_homePushButton_clicked()
 void Jobs_Admin::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
-    if(isco == 0){
-    Jobs_karbar *w5 = new Jobs_karbar;
-    w5->show();
-    this->close();
+    QString isco =a.GETCURRENTis_company();
+    if(isco=="0"){
+        My_Networks_karbar *w1 = new My_Networks_karbar;
+        w1->show();
+        this->close();
     }
-    else{
-    Jobs_Admin *w2 = new Jobs_Admin;
-    w2->show();
-    this->close();
+    if(isco=="1"){
+        My_network_Admin *w6 = new My_network_Admin;
+        w6->show();
+        this->close();
     }
 
     //اinja bayad if bezarim baraye karbar joda vared shavad va baraye admin joda
@@ -54,7 +48,7 @@ void Jobs_Admin::on_pushButton_2_clicked()
 void Jobs_Admin::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();

@@ -31,31 +31,22 @@ Home::Home(QWidget *parent) :
     database.open();*/
 
     QSqlQuery q;
-    QSqlQuery s;
     q.exec("SELECT caption FROM post");
-    s.exec("SELECT file_path FROM post");
+    q.exec("SELECT caption FROM post");
     QVBoxLayout *lay = new QVBoxLayout(this);
-    QString pth;
-    QString fn;
-    while(q.next()){
+    for (int i = 0; i<10 ;i++ ) {
         /*QString path = "D:\javad\photo_2024-07-07_20-53-15.jpg";
         QPixmap image(path);
         QLabel *aks = new QLabel("hhhhhhhhhh");
         aks->setPixmap(image);*/
-
-        /*if(q.first())
+        QString fn;
+        if(q.first())
         {
              fn = q.value("caption").toString();
-        }*/
-        fn = q.value(0).toString();
-        pth = s.value(0).toString();
-        QPixmap image(pth);
-        QLabel *aks = new QLabel();
-        aks->setPixmap(image);
+        }
         QLineEdit *payam = new QLineEdit(fn);
         payam->setEnabled(false);
         QPushButton *shw = new QPushButton("show post");
-        //shw->clicked(true)ui->label->setPixmap(image);
         //lay->addWidget(aks);
         lay->addWidget(payam);
         lay->addWidget(shw);
@@ -80,13 +71,13 @@ void Home::on_homePushButton_clicked()
 void Home::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
-    if(isco == 0){
+    QString isco =a.GETCURRENTis_company();
+    if(isco == "0"){
     My_Networks_karbar *w1 = new My_Networks_karbar;
     w1->show();
     this->close();
     }
-    else{
+    if(isco == "1"){
     My_network_Admin *w6 = new My_network_Admin;
     w6->show();
     this->close();
@@ -97,18 +88,17 @@ void Home::on_pushButton_2_clicked()
 void Home::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
-    if(isco == 0){
-    Jobs_karbar *w5 = new Jobs_karbar;
-    w5->show();
-    this->close();
-    }
-    else{
+    QString isco =a.GETCURRENTis_company();
+    if(isco == "1"){
     Jobs_Admin *w2 = new Jobs_Admin;
     w2->show();
     this->close();
     }
-
+    else{
+    Jobs_karbar *w5 = new Jobs_karbar;
+    w5->show();
+    this->close();
+    }
 }
 
 

@@ -7,7 +7,7 @@
 
 class Job
 {
-    int salary;
+    QString salary;
     QString job_name;
     QString company_name;
     QString skill_required;
@@ -16,13 +16,21 @@ class Job
     QString type;
 public:
     Job();
-    int GETsalary();
-    QString GETjob_name();
-    QString GETcompany_name();
-    QString GETskill_required();
-    QString GETworkPlace_type();
-    QString GETlocation();
-    QString GETtype();
+    QString GETsalary(QString);
+    QString GETjob_name(QString);
+    QString GETcompany_name(QString);
+    QString GETskill_required(QString);
+    QString GETworkPlace_type(QString);
+    QString GETlocation(QString);
+    QString GETtype(QString);
+
+    void SETsalary(QString);
+    void SETjob_name(QString);
+    void SETcompany_name(QString);
+    void SETskill_required(QString);
+    void SETworkPlace_type(QString);
+    void SETlocation(QString);
+    void SETtype(QString);
 };
 
 #endif // JOB_H
