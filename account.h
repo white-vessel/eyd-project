@@ -23,8 +23,7 @@ public:
     QString GETphone_number(QString);
     QString GETemail(QString);
     QString GETCURRENTaccount_id();
-    QString GETis_company(QString);
-    QString GETCURRENTis_company();
+    QString GETis_company();
 
     void SETCURRENTaccount_id(QString);
     void SETaccount_id(QString);

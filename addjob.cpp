@@ -31,7 +31,7 @@ void addJob::on_homePushButton_clicked()
 void addJob::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETCURRENTis_company();
+    QString isco = a.GETis_company();
     if(isco=="0"){
         My_Networks_karbar *w1 = new My_Networks_karbar;
         w1->show();
@@ -51,7 +51,7 @@ void addJob::on_pushButton_2_clicked()
 void addJob::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETCURRENTis_company();
+    QString isco = a.GETis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();
