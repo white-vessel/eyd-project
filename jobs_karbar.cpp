@@ -13,29 +13,38 @@
 #include "QsqlQueryModel"
 #include "foruser.h"//
 #include "mecompany.h"
+#include "QString"
 Jobs_karbar::Jobs_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_karbar)
 {
     ui->setupUi(this);
-    ui->groupBox_3->hide();
+    //ui->groupBox_3->hide();
     ui->groupBox_4->hide();
     ui->groupBox_5->hide();
     ui->groupBox_6->hide();
     QString f1,f2,f3,f4;
-    QSqlQuery q1,q2,q3,q4;
-    q1.exec("SELECT company FROM company_jobs");
+    QSqlQuery q1;
+    //q1.exec("SELECT company FROM company_jobs");
+    f1 = q1.exec("SELECT company FROM company_jobs WHERE num = 1");
+    ui->lineEdit_2->setText(f1);
+    q1.finish();
+    QSqlQuery q2,q3,q4;
     q2.exec("SELECT job_title FROM company_jobs");
     q3.exec("SELECT workplace_type FROM company_jobs");
     q4.exec("SELECT job_location FROM company_jobs");
-    f1 = q1.value(1).toString();
-    f2 = q2.value(1).toString();
-    f3 = q3.value(1).toString();
-    f4 = q4.value(1).toString();
+    f1 = q1.value(0).toString();
     ui->lineEdit_2->setText(f1);
+    f2 = q2.value(0).toString();
     ui->lineEdit_3->setText(f2);
+    f3 = q3.value(0).toString();
     ui->lineEdit_4->setText(f3);
+    f4 = q4.value(0).toString();
     ui->lineEdit_5->setText(f4);
+
+
+
+
     if(f1 != ""){
        ui->groupBox_3->show();
     }
