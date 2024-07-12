@@ -6,6 +6,7 @@
 #include "me.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
+#include "account.h"
 My_Networks_karbar::My_Networks_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_Networks_karbar)
@@ -29,7 +30,7 @@ void My_Networks_karbar::on_homePushButton_clicked()
 void My_Networks_karbar::on_pushButton_2_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+    QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         My_Networks_karbar *w1 = new My_Networks_karbar;
         w1->show();
@@ -49,7 +50,7 @@ void My_Networks_karbar::on_pushButton_2_clicked()
 void My_Networks_karbar::on_pushButton_3_clicked()
 {
     Account a;
-    QString isco =a.GETis_company();
+   QString isco =a.GETCURRENTis_company();
     if(isco=="0"){
         Jobs_karbar *w5 = new Jobs_karbar;
         w5->show();
