@@ -26,7 +26,7 @@ confirmprofile::~confirmprofile()
 void confirmprofile::on_pushButton_clicked()
 {
     QString ID = confirm.GETCURRENTaccount_id();
-    int id_count=1;
+    //int id_count=1;
     QSqlQuery q;
     QSqlQuery s;
     QString skl;
