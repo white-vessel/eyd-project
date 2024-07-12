@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/confirm profile1.jpg);
 background-color: rgb(149, 223, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -184,7 +185,7 @@ background-color: rgb(149, 223, 255);</string>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>380</x>
        <y>390</y>
        <width>61</width>
        <height>31</height>
@@ -197,8 +198,8 @@ background-color: rgb(149, 223, 255);</string>
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>35</x>
-       <y>30</y>
+       <x>30</x>
+       <y>20</y>
        <width>391</width>
        <height>361</height>
       </rect>

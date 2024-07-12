@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/welcome1.jpg);
 background-color: rgb(142, 182, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -23,7 +24,7 @@ background-color: rgb(142, 182, 255);</string>
      <rect>
       <x>20</x>
       <y>90</y>
-      <width>651</width>
+      <width>671</width>
       <height>411</height>
      </rect>
     </property>

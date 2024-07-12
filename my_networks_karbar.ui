@@ -15,6 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
+background-image: url(:/new/prefix1/confirm profile1.jpg);
 background-color: rgb(130, 173, 133);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
