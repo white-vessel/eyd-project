@@ -6,6 +6,7 @@
 #include "me.h"
 #include "jobs_admin.h"
 #include "jobs_karbar.h"
+#include "account.h"
 My_Networks_karbar::My_Networks_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_Networks_karbar)

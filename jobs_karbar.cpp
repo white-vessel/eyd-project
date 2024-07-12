@@ -7,11 +7,72 @@
 #include "jobs_admin.h"
 #include "home.h"
 #include "account.h"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "foruser.h"//
 Jobs_karbar::Jobs_karbar(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Jobs_karbar)
 {
     ui->setupUi(this);
+    ui->groupBox_3->hide();
+    ui->groupBox_4->hide();
+    ui->groupBox_5->hide();
+    ui->groupBox_6->hide();
+    QString f1,f2,f3,f4;
+    QSqlQuery q1,q2,q3,q4;
+    q1.exec("SELECT company FROM company_jobs");
+    q2.exec("SELECT job_title FROM company_jobs");
+    q3.exec("SELECT workplace_type FROM company_jobs");
+    q4.exec("SELECT job_location FROM company_jobs");
+    f1 = q1.value(1).toString();
+    f2 = q2.value(1).toString();
+    f3 = q3.value(1).toString();
+    f4 = q4.value(1).toString();
+    ui->lineEdit_2->setText(f1);
+    ui->lineEdit_3->setText(f2);
+    ui->lineEdit_4->setText(f3);
+    ui->lineEdit_5->setText(f4);
+    if(f1 != ""){
+       ui->groupBox_3->show();
+    }
+    f1 = q1.value(2).toString();
+    f2 = q2.value(2).toString();
+    f3 = q3.value(2).toString();
+    f4 = q4.value(2).toString();
+    ui->lineEdit_6->setText(f1);
+    ui->lineEdit_7->setText(f2);
+    ui->lineEdit_8->setText(f3);
+    ui->lineEdit_9->setText(f4);
+    if(f1 != ""){
+        ui->groupBox_4->show();
+    }
+    f1 = q1.value(3).toString();
+    f2 = q2.value(3).toString();
+    f3 = q3.value(3).toString();
+    f4 = q4.value(3).toString();
+    ui->lineEdit_10->setText(f1);
+    ui->lineEdit_11->setText(f2);
+    ui->lineEdit_12->setText(f3);
+    ui->lineEdit_13->setText(f4);
+    if(f1 != ""){
+        ui->groupBox_5->show();
+    }
+    f1 = q1.value(4).toString();
+    f2 = q2.value(4).toString();
+    f3 = q3.value(4).toString();
+    f4 = q4.value(4).toString();
+    ui->lineEdit_14->setText(f1);
+    ui->lineEdit_15->setText(f2);
+    ui->lineEdit_16->setText(f3);
+    ui->lineEdit_17->setText(f4);
+    if(f1 != ""){
+        ui->groupBox_6->show();
+    }
+
+
 }
 
 Jobs_karbar::~Jobs_karbar()
@@ -30,15 +91,15 @@ void Jobs_karbar::on_pushButton_2_clicked()
 {
     Account a;
     QString isco =a.GETis_company();
-    if(isco=="0"){
-        My_Networks_karbar *w1 = new My_Networks_karbar;
-        w1->show();
-        this->close();
+    if(isco == 0){
+    Jobs_karbar *w5 = new Jobs_karbar;
+    w5->show();
+    this->close();
     }
-    if(isco=="1"){
-        My_network_Admin *w6 = new My_network_Admin;
-        w6->show();
-        this->close();
+    else{
+    Jobs_Admin *w2 = new Jobs_Admin;
+    w2->show();
+    this->close();
     }
 
     //اinja bayad if bezarim baraye karbar joda vared shavad va baraye admin joda
