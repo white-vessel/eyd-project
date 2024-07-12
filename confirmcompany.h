@@ -15,6 +15,9 @@ public:
     explicit confirmCompany(QWidget *parent = nullptr);
     ~confirmCompany();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::confirmCompany *ui;
 };
