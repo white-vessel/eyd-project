@@ -43,9 +43,9 @@ void code::on_pushButton_2_clicked()
 
 void code::on_pushButton_clicked()
 {
-    //QString Uname = sia.GETCURRENTaccount_id();
-    //QSqlQuery q;
-    QString comp = sia.GETis_company();
+    QString Uname = sia.GETCURRENTaccount_id();
+    QSqlQuery q;
+    int comp = q.exec("SELECT is_company FROM user WHERE username='"+Uname+"'");
     int code = ui->lineEdit_2->text().toInt();
     if(code != veri)
     {
