@@ -8,6 +8,7 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "person.h"
+person confirm;
 confirmprofile::confirmprofile(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::confirmprofile)
@@ -24,6 +25,7 @@ confirmprofile::~confirmprofile()
 
 void confirmprofile::on_pushButton_clicked()
 {
+    QString ID = confirm.GETCURRENTaccount_id();
     int id_count=1;
     QSqlQuery q;
     QSqlQuery s;
@@ -37,12 +39,11 @@ void confirmprofile::on_pushButton_clicked()
     most_recent_company=ui->lineEdit_15->text();
     employment_type=ui->lineEdit_16->text();
     skl = ui->lineEdit_18->text();
+    q.exec("UPDATE user SET first_name='"+Fname+"',last_name='"+Lname+"',employment_type='"+employment_type+"',skills='"+skl+"' WHERE username='"+ID+"'");
+    //UPDATE user SET first_name='"+Fname+"',last_name='"+Lname+"',employemnt_type='"+employment_type+"',skills='"+skl+"' WHERE username='"+ID+"'"
 
-
-    while (true) {
-
-        QString qstring_id = QString::number(id_count);
-        s.exec("SELECT id FROM user WHERE id='"+qstring_id+"'");
+       /* QString qstring_id = QString::number(id_count);
+        s.exec("SELECT id FROM user WHERE username='"+ID+"'");
 
         if(s.first()){
             id_count=id_count+1;
@@ -50,10 +51,10 @@ void confirmprofile::on_pushButton_clicked()
         else {
             id_count=id_count-1;
             QString qstring_id = QString::number(id_count);
-            q.exec("UPDATE user SET first_name='"+Fname+"',last_name='"+Lname+"',birthday='"+birthday+"',most_recent_jobtitle='"+most_recent_job_title+"',school_university='"+university+"',most_recent_company='"+most_recent_company+"',employment_type='"+employment_type+"',skills='"+skl+"' WHERE id='"+qstring_id+"'");
+
             break;
         }
-    }
+    }*/
 
     bool aba = false;
     if(ui->lineEdit_10->text() =="")

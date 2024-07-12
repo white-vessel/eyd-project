@@ -5,7 +5,13 @@
 #include <iostream>
 #include "QMessageBox"
 #include "confirmprofile.h"
-
+#include "person.h"
+#include "confirmcompany.h"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+person sia;
 using namespace std;
 
 
@@ -37,6 +43,9 @@ void code::on_pushButton_2_clicked()
 
 void code::on_pushButton_clicked()
 {
+    QString Uname = sia.GETCURRENTaccount_id();
+    QSqlQuery q;
+    int comp = q.exec("SELECT is_company FROM user WHERE username='"+Uname+"'");
     int code = ui->lineEdit_2->text().toInt();
     if(code != veri)
     {
@@ -44,9 +53,17 @@ void code::on_pushButton_clicked()
     }
     else
     {
-        confirmprofile *w=new confirmprofile;
-        w->show();
-        this->close();
+        if(comp == 0){
+            confirmprofile *w=new confirmprofile;
+            w->show();
+            this->close();
+        }
+        else{
+            confirmCompany *sa = new confirmCompany;
+            sa->show();
+            this->close();
+        }
+
     }
 }
 
