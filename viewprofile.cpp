@@ -32,7 +32,6 @@ viewProfile::~viewProfile()
     q.exec("SELECT searched FROM search_user");
     if(q.first()){
       search1 =q.value("searched").toString();
-
     }
     //q.exec("SELECT username FROM current_user");
     //QString Uname = q.value("username").toString();
