@@ -36,7 +36,7 @@ background-color: rgb(217, 255, 174);</string>
       <rect>
        <x>40</x>
        <y>90</y>
-       <width>231</width>
+       <width>201</width>
        <height>24</height>
       </rect>
      </property>
@@ -71,7 +71,7 @@ background-color: rgb(217, 255, 174);</string>
       <rect>
        <x>40</x>
        <y>170</y>
-       <width>231</width>
+       <width>201</width>
        <height>24</height>
       </rect>
      </property>
@@ -81,7 +81,7 @@ background-color: rgb(217, 255, 174);</string>
       <rect>
        <x>40</x>
        <y>280</y>
-       <width>231</width>
+       <width>201</width>
        <height>24</height>
       </rect>
      </property>
