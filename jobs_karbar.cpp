@@ -19,7 +19,12 @@ Jobs_karbar::Jobs_karbar(QWidget *parent) :
     ui(new Ui::Jobs_karbar)
 {
     ui->setupUi(this);
-    //ui->groupBox_3->hide();
+    /*QString f1;
+    QSqlQuery q;
+    q.exec("SELECT company FROM company_jobs");
+    f1 = q.value(0).toString();
+    ui->lineEdit_2->setText(q.value(0).toString());*/
+    /*ui->groupBox_3->hide();
     ui->groupBox_4->hide();
     ui->groupBox_5->hide();
     ui->groupBox_6->hide();
@@ -80,7 +85,7 @@ Jobs_karbar::Jobs_karbar(QWidget *parent) :
     ui->lineEdit_17->setText(f4);
     if(f1 != ""){
         ui->groupBox_6->show();
-    }
+    }*/
 
 
 }

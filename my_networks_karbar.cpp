@@ -8,7 +8,7 @@
 #include "jobs_karbar.h"
 #include "account.h"
 #include "network.h"
-
+#include "mecompany.h"
 #include <QsqlDatabase>//دیتابیس
 #include "QsqlDriver"
 #include "QsqlQuery"
