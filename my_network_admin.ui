@@ -176,7 +176,7 @@ background-color: rgb(117, 139, 113);</string>
       <x>320</x>
       <y>150</y>
       <width>256</width>
-      <height>281</height>
+      <height>331</height>
      </rect>
     </property>
    </widget>
@@ -185,7 +185,7 @@ background-color: rgb(117, 139, 113);</string>
      <rect>
       <x>420</x>
       <y>110</y>
-      <width>55</width>
+      <width>91</width>
       <height>16</height>
      </rect>
     </property>
@@ -195,7 +195,7 @@ background-color: rgb(117, 139, 113);</string>
      </font>
     </property>
     <property name="text">
-     <string>following</string>
+     <string>followers</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_6">

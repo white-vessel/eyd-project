@@ -31,7 +31,7 @@ Me::Me(QWidget *parent) :
     //QString Uname = q.value("username").toString();
     ui->lineEdit_2->setText(asli.GETfirst_name(Uname));
     ui->lineEdit_3->setText(asli.GETlast_name(Uname));
-    ui->lineEdit_4->setText(asli.GETemployment_type(Uname));
+    ui->lineEdit_4->setText(asli.GETemail(Uname));
     ui->lineEdit_5->setText(asli.GETskills(Uname));
 }
 
@@ -117,7 +117,7 @@ void Me::on_pushButton_6_clicked()
     QString Uname = naAsli.GETCURRENTaccount_id();
     ui->lineEdit_2->setText(asli.GETfirst_name(Uname));
     ui->lineEdit_3->setText(asli.GETlast_name(Uname));
-    ui->lineEdit_4->setText(asli.GETemployment_type(Uname));
+    ui->lineEdit_4->setText(asli.GETemail(Uname));
     ui->lineEdit_5->setText(asli.GETskills(Uname));
 }
 

@@ -173,7 +173,7 @@ background-color: rgb(225, 242, 255);</string>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>90</y>
       <width>651</width>
       <height>411</height>
@@ -187,7 +187,7 @@ background-color: rgb(225, 242, 255);</string>
       <rect>
        <x>30</x>
        <y>50</y>
-       <width>61</width>
+       <width>101</width>
        <height>16</height>
       </rect>
      </property>
@@ -199,7 +199,7 @@ background-color: rgb(225, 242, 255);</string>
       </font>
      </property>
      <property name="text">
-      <string>name:</string>
+      <string>first name:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -259,7 +259,7 @@ background-color: rgb(225, 242, 255);</string>
       </font>
      </property>
      <property name="text">
-      <string>employment type:</string>
+      <string>Email:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
@@ -268,7 +268,7 @@ background-color: rgb(225, 242, 255);</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>130</x>
        <y>50</y>
        <width>113</width>
        <height>24</height>
@@ -294,7 +294,7 @@ background-color: rgb(225, 242, 255);</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>130</x>
        <y>200</y>
        <width>113</width>
        <height>24</height>
