@@ -123,13 +123,21 @@ void Home::on_pushButton_4_clicked()
 
 void Home::on_pushButton_5_clicked()
 {
-    Me *w4 = new Me;
-    w4->show();
-    this->close();
+    Account a;
+    QString isco =a.GETCURRENTis_company();
+    if(isco=="0"){
+        Me *w4 = new Me;
+        w4->show();
+        this->close();
+    }
+    if(isco=="1"){
+        MeCompany *wr = new MeCompany;
+        wr->show();
+        this->close();
+    }
+
     //inja bayad compony va carbar fargh kone:
-    MeCompany *wr = new MeCompany;
-    wr->show();
-    this->close();
+
 }
 
 

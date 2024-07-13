@@ -8,6 +8,12 @@
 #include "jobs_karbar.h"
 #include "account.h"
 #include "mecompany.h"
+
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+
 My_network_Admin::My_network_Admin(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::My_network_Admin)
@@ -78,12 +84,32 @@ void My_network_Admin::on_pushButton_4_clicked()
 
 void My_network_Admin::on_pushButton_5_clicked()
 {
-    Me *w4 = new Me;
-    w4->show();
-    this->close();
+    Account a;
+    QString isco =a.GETCURRENTis_company();
+    if(isco=="0"){
+        Me *w4 = new Me;
+        w4->show();
+        this->close();
+    }
+    if(isco=="1"){
+        MeCompany *wr = new MeCompany;
+        wr->show();
+        this->close();
+    }
+
     //inja bayad compony va carbar fargh kone:
-    MeCompany *wr = new MeCompany;
-    wr->show();
-    this->close();
+
+}
+
+
+void My_network_Admin::on_pushButton_6_clicked()
+{
+    QSqlQuery d;
+    Account acc;
+    QString cuser=acc.GETCURRENTaccount_id();
+    d.exec("SELECT username FROM network WHERE follow='"+cuser+"'");
+    QSqlQueryModel *qn = new QSqlQueryModel;
+    qn->setQuery(d);
+    ui->tableView->setModel(qn);
 }
 

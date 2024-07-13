@@ -35,13 +35,13 @@ void Jobs_Admin::on_pushButton_2_clicked()
 {
     Account a;
     QString isco =a.GETCURRENTis_company();
-    if(isco == 0){
-    Jobs_karbar *w5 = new Jobs_karbar;
+    if(isco == "0"){
+    My_Networks_karbar *w5 = new My_Networks_karbar;
     w5->show();
     this->close();
     }
-    else{
-    Jobs_Admin *w2 = new Jobs_Admin;
+    if(isco == "1"){
+    My_network_Admin *w2 = new My_network_Admin;
     w2->show();
     this->close();
     }
@@ -81,13 +81,21 @@ void Jobs_Admin::on_pushButton_4_clicked()
 
 void Jobs_Admin::on_pushButton_5_clicked()
 {
-    Me *w4 = new Me;
-    w4->show();
-    this->close();
+    Account a;
+    QString isco =a.GETCURRENTis_company();
+    if(isco=="0"){
+        Me *w4 = new Me;
+        w4->show();
+        this->close();
+    }
+    if(isco=="1"){
+        MeCompany *wr = new MeCompany;
+        wr->show();
+        this->close();
+    }
+
     //inja bayad compony va carbar fargh kone:
-    MeCompany *wr = new MeCompany;
-    wr->show();
-    this->close();
+
 }
 
 
