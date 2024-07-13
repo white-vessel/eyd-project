@@ -113,3 +113,15 @@ void My_network_Admin::on_pushButton_6_clicked()
     ui->tableView->setModel(qn);
 }
 
+
+void My_network_Admin::on_pushButton_7_clicked()
+{
+    /*QSqlQuery d;
+    Account acc;
+    QString cuser=acc.GETCURRENTaccount_id();
+    d.exec("SELECT number_of_job,username FROM who_applied WHERE company='"+cuser+"'");
+    QSqlQueryModel *qn = new QSqlQueryModel;
+    qn->setQuery(d);
+    ui->tableView->setModel(qn);*/
+}
+
