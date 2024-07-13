@@ -169,3 +169,26 @@ void Jobs_karbar::on_pushButton_5_clicked()
 
 }
 
+
+void Jobs_karbar::on_pushButton_7_clicked()
+{
+    QSqlQuery d;
+
+    Account acc;
+
+    d.exec("SELECT number,company,job_title,job_type,workplace_type,job_location,skill_required,salary FROM jobs ");
+    QSqlQueryModel *qn = new QSqlQueryModel;
+    qn->setQuery(d);
+    ui->tableView->setModel(qn);
+}
+
+
+void Jobs_karbar::on_pushButton_6_clicked()
+{
+    Account a;
+    QString cuser=a.GETCURRENTaccount_id();
+    QString anumber= ui->lineEdit_2->text();
+    QSqlQuery q;
+    q.exec("INSERT INTO who_applied(username,number_of_job)VALUES('"+cuser+"','"+anumber+"')");
+}
+
