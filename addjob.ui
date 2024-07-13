@@ -124,7 +124,7 @@ background-color: rgb(217, 255, 174);</string>
       </font>
      </property>
      <property name="text">
-      <string>email:</string>
+      <string>location:</string>
      </property>
      <property name="frame">
       <bool>false</bool>
