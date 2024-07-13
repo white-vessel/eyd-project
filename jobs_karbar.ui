@@ -203,7 +203,7 @@ background-color: rgb(192, 255, 175);</string>
      </rect>
     </property>
     <property name="placeholderText">
-     <string>enter company name...</string>
+     <string>enter job number.</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">

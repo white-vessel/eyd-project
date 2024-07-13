@@ -36,6 +36,7 @@ void addJob::on_comboBox_2_activated(int index)
         break;
     case 3:
         typ = "project work";
+        break;
 
     }
 }
