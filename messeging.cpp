@@ -112,7 +112,7 @@ void Messeging::on_pushButton_7_clicked()
    QSqlQuery d;
    Account acc;
    QString cuser=acc.GETCURRENTaccount_id();
-   d.exec("SELECT from_user,chat,time2 FROM direct WHERE from_user='"+cuser+"' AND to_user='"+touser+"' OR  to_user='"+touser+"' AND from_user='"+cuser+"'  ORDER BY time2 ASC");
+   d.exec("SELECT from_user,chat,time2 FROM direct WHERE from_user='"+cuser+"' OR to_user='"+cuser+"' ORDER BY time2 ASC");
    QSqlQueryModel *qn = new QSqlQueryModel;
    qn->setQuery(d);
    ui->tableView->setModel(qn);
