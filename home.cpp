@@ -21,6 +21,7 @@
 #include "QPixmap"
 #include "QPushButton"
 #include "mecompany.h"
+#include "viewprofile.h"
 Home::Home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Home)
@@ -178,6 +179,8 @@ void Home::on_pushButton_clicked()
         q.finish();
     }
 
+    viewProfile *rf = new viewProfile;
+    rf->show();
     //0000000
 
     q.exec("SELECT searched FROM search_user");

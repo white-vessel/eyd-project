@@ -14,6 +14,7 @@
 #include "account.h"
 #include "person.h"
 #include "job.h"
+#include "viewprofile.h"
 person asl;
 Account naAsl;
 Job ads;
@@ -122,5 +123,27 @@ void MeCompany::on_pushButton_6_clicked()
     ui->lineEdit_2->setText(ads.GETcompany_name(Uname));
     ui->lineEdit_3->setText(asl.GETemail(Uname));
     ui->lineEdit_5->setText(asl.GETskills(Uname));
+}
+
+
+void MeCompany::on_pushButton_clicked()
+{
+    QString srch= ui->lineEdit->text();
+    QSqlQuery q;
+
+    q.exec("SELECT searched FROM search_user");
+
+    if(q.first()){
+        q.exec("DELETE FROM search_user ");
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+    else{
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+
+    viewProfile *rf = new viewProfile;
+    rf->show();
 }
 
