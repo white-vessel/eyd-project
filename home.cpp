@@ -159,3 +159,11 @@ void Home::on_pushButton_7_clicked()
     ui->tableView->setModel(qm);
 }
 
+
+void Home::on_pushButton_clicked()
+{
+    QString srch= ui->lineEdit->text();
+    QSqlQuery q;
+    q.exec(SELE)
+}
+
