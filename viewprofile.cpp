@@ -83,3 +83,9 @@ void viewProfile::on_pushButton_5_clicked()
     this->close();
 }
 
+
+void viewProfile::on_pushButton_6_clicked()
+{
+
+}
+

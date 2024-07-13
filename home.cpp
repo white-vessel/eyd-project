@@ -8,6 +8,7 @@
 #include "jobs_karbar.h"
 #include "addpost.h"
 #include "account.h"
+#include "person.h"
 
 #include <QsqlDatabase>//دیتابیس
 #include "QsqlDriver"
@@ -62,7 +63,7 @@ Home::Home(QWidget *parent) :
         lay->addWidget(shw);
 
     }
-    ui->scrollContents->setLayout(lay);
+    //ui->scrollContents->setLayout(lay);
 }
 
 Home::~Home()
@@ -164,6 +165,27 @@ void Home::on_pushButton_clicked()
 {
     QString srch= ui->lineEdit->text();
     QSqlQuery q;
-    q.exec(SELE)
+
+    q.exec("SELECT searched FROM search_user");
+
+    if(q.first()){
+        q.exec("DELETE FROM search_user ");
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+    else{
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+
+    //0000000
+
+    q.exec("SELECT searched FROM search_user");
+    if(q.first()){
+        QString search=q.value("searched").toString();
+
+    }
+    //00000
+
 }
 

@@ -108,7 +108,7 @@ background-color: rgb(127, 170, 189);</string>
       </font>
      </property>
      <property name="text">
-      <string>employment type:</string>
+      <string>Email:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_2">
