@@ -38,9 +38,9 @@ void confirmCompany::on_pushButton_clicked()
     QString Fname,Lname,birthday,most_recent_job_title,university,most_recent_company,employment_type;
     Fname=ui->lineEdit_4->text();
     Lname=ui->lineEdit_5->text();
-    birthday=ui->lineEdit_6->text();
+    skl=ui->lineEdit_6->text();
 
-    q.exec("UPDATE user SET company_name='"+Fname+"',email='"+Lname+"',skill='"+skl+"' WHERE username='"+ID+"'");
+    q.exec("UPDATE user SET company_name='"+Fname+"',email='"+Lname+"',skills='"+skl+"' WHERE username='"+ID+"'");
     bool aba = false;
     if(ui->lineEdit_4->text() =="")
     {
