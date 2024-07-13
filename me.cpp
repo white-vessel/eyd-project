@@ -12,6 +12,7 @@
 #include "QsqlQueryModel"
 #include "account.h"
 #include "person.h"
+#include "viewprofile.h"
 person asli;
 Account naAsli;
 Me::Me(QWidget *parent) :
@@ -119,5 +120,27 @@ void Me::on_pushButton_6_clicked()
     ui->lineEdit_3->setText(asli.GETlast_name(Uname));
     ui->lineEdit_4->setText(asli.GETemail(Uname));
     ui->lineEdit_5->setText(asli.GETskills(Uname));
+}
+
+
+void Me::on_pushButton_clicked()
+{
+    QString srch= ui->lineEdit->text();
+    QSqlQuery q;
+
+    q.exec("SELECT searched FROM search_user");
+
+    if(q.first()){
+        q.exec("DELETE FROM search_user ");
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+    else{
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+
+    viewProfile *rf = new viewProfile;
+    rf->show();
 }
 

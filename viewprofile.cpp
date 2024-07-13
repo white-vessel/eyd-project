@@ -8,6 +8,15 @@
 #include "jobs_karbar.h"
 #include "home.h"
 #include "account.h"
+#include <QsqlDatabase>//دیتابیس
+#include "QsqlDriver"
+#include "QsqlQuery"
+#include "QsqlQueryModel"
+#include "account.h"
+#include "person.h"
+person as;
+Account naA;
+QString search1;
 viewProfile::viewProfile(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::viewProfile)
@@ -18,6 +27,19 @@ viewProfile::viewProfile(QWidget *parent) :
 viewProfile::~viewProfile()
 {
     delete ui;
+    QSqlQuery q;
+    QString Uname = naA.GETCURRENTaccount_id();
+    q.exec("SELECT searched FROM search_user");
+    if(q.first()){
+      search1 =q.value("searched").toString();
+
+    }
+    //q.exec("SELECT username FROM current_user");
+    //QString Uname = q.value("username").toString();
+    ui->lineEdit_2->setText(as.GETfirst_name(search1));
+    ui->lineEdit_3->setText(as.GETlast_name(search1));
+    ui->lineEdit_4->setText(as.GETemail(search1));
+    ui->lineEdit_5->setText(as.GETskills(search1));
 }
 void viewProfile::on_homePushButton_clicked()
 {

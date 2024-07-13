@@ -105,3 +105,9 @@ void Jobs_Admin::on_pushButton_6_clicked()
     wwe->show();
 }
 
+
+void Jobs_Admin::on_pushButton_clicked()
+{
+
+}
+

@@ -13,6 +13,7 @@
 #include "QsqlQuery"
 #include "QsqlQueryModel"
 #include "foruser.h"//
+#include "viewprofile.h"
 
 QString touser;
 
@@ -116,5 +117,27 @@ void Messeging::on_pushButton_7_clicked()
    QSqlQueryModel *qn = new QSqlQueryModel;
    qn->setQuery(d);
    ui->tableView->setModel(qn);
+}
+
+
+void Messeging::on_pushButton_clicked()
+{
+    QString srch= ui->lineEdit->text();
+    QSqlQuery q;
+
+    q.exec("SELECT searched FROM search_user");
+
+    if(q.first()){
+        q.exec("DELETE FROM search_user ");
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+    else{
+        q.exec("INSERT INTO search_user(searched)VALUES('"+srch+"')");
+        q.finish();
+    }
+
+    viewProfile *rf = new viewProfile;
+    rf->show();
 }
 
