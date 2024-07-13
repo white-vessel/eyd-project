@@ -45,7 +45,8 @@ void addJob::on_pushButton_clicked()
     //QString Uname = john.GETCURRENTaccount_id();
     nerw.SETjob_name(ui->lineEdit->text());
     nerw.SETcompany_name(ui->lineEdit_3->text());
-
+    nerw.SETsalary(ui->lineEdit_4->text());
+    nerw.SETworkPlace_type(ui->lineEdit_6->text());
     nerw.SETlocation(ui->lineEdit_5->text());
     nerw.SETtype(typ);
 }
